@@ -1,6 +1,6 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAMES HERE"
+title: "Standardized Testing"
+author: "Haolong Liu, Imani Oluwafumilayo Maliti"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
