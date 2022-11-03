@@ -1,58 +1,19 @@
 # Proposal
 
 ## Research topic
-SAT, a standardized test widely used for college admissions in the United States, whether it
-is only for admission purposes or it actually helps students prepare colleges is always an
-interesting question. Additionally, high school GPA or SAT, whether one is more important in
-success in college is also debated frequently. It comes with no surprise that there is a
-positive relationship between SAT and college GPA, but there are still areas to dive deeper.
-For example, is the correlation strong? Is high school GPA a better predictor than SAT? Also,
-does it apply to both males and females? In this research project, we seek answers for the
-above questions. Conducting this research helps students understanding the reasons they
-study for standardized tests, which could be beyond purely admissions. Studying how SAT
-works for college success may also guide a way to change the test corresponding or guide
-us to think deeper about the current admission systems. Examinng the gender differences
-could help use look closer at fairness of the admission system in terms of diversity. The
-reason we choose to analyze SAT only is because SAT is the most commonly used
-standardized tests in United States and focusing on one test increases consistency of the
-data.
+What are the determinants of high school students’ ability to succeed in college? One may argue that high school GPA is a statistically sound predictor. However, others may say that the Scholastic Aptitude Test (i.e, SAT) is a better one. Nevertheless, the question remains whether or not either are actually accurate of students’ preparedness for and performance in college. In this research project, we seek answers for the following questions: What is the relationship between SAT score and college GPA? Is high school GPA a better predictor for college GPA than SAT scores? Does this relationship apply to both males and females?  Conducting this research may help students better understand how to viably prepare for their journey in higher education. Also, studying how the SAT’s effect college success (or lack thereof) may also guide us to think deeper about the current admission systems. Examining gender differences could aid in taking a closer at the fairness of the admission system in terms of gender diversity. The reason we choose to analyze the SAT only is because it is the most common standardized test in the United States; moreover, focusing on one test increases the consistency of the data.
 
 ## Data availability
-### Datasets 1: 1000 anonymous students’ SAT and GPA
-This datasets was collected by Chance, a quantitative literacy course developed
-cooperatively by the Chance Team: J. Laurie Snell and Peter Doyle of Dartmouth College,
-Joan Garfield of the University of Minnesota, Tom Moore of Grinnell College, Bill Peterson of
-Middlebury College, and Ngambal Shah of Spelman College. The datasets collects 1000 anonymous students’ gender, SAT scores, high-school GPA, and first-year college GPA. The
-raw data is directly accessible from the following link:\\
+### Dataset 1: 1000 anonymous students’ SAT and GPA
+This dataset was collected by Chance, a quantitative literacy course developed cooperatively by the Chance Team: J. Laurie Snell and Peter Doyle of Dartmouth College, Joan Garfield of the University of Minnesota, Tom Moore of Grinnell College, Bill Peterson of Middlebury College, and Ngambal Shah of Spelman College. The dataset collects 1000 anonymous students’ gender, SAT scores, high-school GPA, and first-year college GPA. The raw data is directly accessible from the following link:\\
 \url{https://chance.dartmouth.edu/course/Syllabi/Princeton96/ETSValidation.html}
 
-### Datasets2: Dartmouth Male and Female Students who take Psychology Courses’s SAT and GPA
-These two datasets are collected by the same source, Chance. Attributes include SAT verbal,
-SAT math scores, SAT scores, total GPA major GPA, and two Psy courses’ GPA. The two
-datasets represent male students and female students respectively and are collected at the
-same time. All these three datasets are rather small scaled and are not updated. They are
-accessible through the following links:\\
+### Dataset 2: Dartmouth Male and Female Students who take Psychology Courses’ SAT and GPA
+These two datasets are collected by the same source, Chance. Attributes include SAT verbal, SAT math scores, SAT scores, total GPA, major GPA, and two Psych courses’ GPA. The two datasets represent male students and female students respectively and are collected at the same time. These datasets are small-scaled and are not updated. They are accessible through the following links:\\
 \url{https://chance.dartmouth.edu/course/Syllabi/Princeton96/Dartmouth.men.html} \\
 \url{https://chance.dartmouth.edu/course/Syllabi/Princeton96/Dartmouth.women.html} \\
-\\ With these three datasets, we could analyze to what extent does high-school GPA and SAT
-scores help students succeed in colleges, and if so, which one is a more important factor.
-Since we have students’ genders, we can also compare results between two genders and see
-whether a significant difference exist or not.
+\\ Including the first dataset with these, we could analyze the extent to which high-school GPAs and SAT scores help students succeed in college. Furthermore, we can identify which one is a more important factor. Since we have students’ genders, we can also compare results between two genders and see whether a significant difference exists or not.
 ### Datasets3: California SAT Report from 1999 to 2016
-Each States in United States has its own Department of Education that creates reports on
-SAT scores by district and school. Take California’s report for example. This datasets is
-collected by the California Department of Education (CDE). CDE receives California students
-in public schools’s SAT scores from the College Board, and then grouped the data by school,
-district, country and state to produce California SAT Report. Scores for schools that had fewer
-than eleven students taking the SAT are not shown on the SAT Report in order to preserve
-the anonymity of the students. The report includes geographical information and a breakdown
-of average SAT scores. Data attributes include school, district, county, number of takers,
-average reading, writing, math scores, and percent of test takers whose total SAT scores are
-greater or equal to 1500. California’s education has been growing steadily over time. With this
-datasets, because we not only have numeric data, but also have SAT percentage data, we
-can analyze whether California students are doing better over time. Also, since the datasets
-covers a longer period of time, we could do a time-series analysis on how California’s SAT scores changed over time. Furthermore, a state-wise comparison of SAT scores may also
-help us understand the fairness of admissions in United States. The data is accessible
-through the following link:\\
+Each state in the United States has its own Department of Education that creates reports on SAT scores by district and school. Take California’s report for example. This dataset is collected by the California Department of Education (CDE). CDE receives California public school students’ SAT scores from the College Board, then groups the data by school, district, country, and state to produce California SAT Report. Scores for schools that had fewer than eleven students taking the SAT are not shown on the SAT Report to preserve the anonymity of the students. The report includes geographical information and a breakdown of average SAT scores. Data attributes include school, district, county, number of takers, average reading, writing, math scores, and percent of test takers whose total SAT scores are greater or equal to 1500. With this dataset, we can analyze whether California students are doing better over time. Also, since the datasets cover a longer time period, we could possibly do a time-series analysis on how California’s SAT scores changed over time. Furthermore, a state-wise comparison of SAT scores may also help us understand the fairness of admissions in the United States. The data is accessible through the following link:\\
 \url{https://data.world/education/california-sat-reports/workspace/intro}
 
