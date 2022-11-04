@@ -2,6 +2,9 @@ introduction
 proposal
 research-topic
 data-availability
+dataset-1-1000-anonymous-students-sat-and-gpa
+dataset-2-dartmouth-male-and-female-students-who-take-psychology-courses-sat-and-gpa
+dataset-3-california-sat-report-from-1999-to-2016
 data
 sources
 cleaning-transformation
