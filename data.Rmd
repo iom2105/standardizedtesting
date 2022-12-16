@@ -6,7 +6,7 @@ We have used multiple datasets for this project, and Each of them will be explai
 ### DataSet 1: 1000 anonymous students' SAT and GPA </b>
 This dataset was collected by Chance, a quantitative literacy course developed cooperatively by the Chance Team: J. Laurie Snell and Peter Doyle of Dartmouth College, Joan Garfield of the University of Minnesota, Tom Moore of Grinnell College, Bill Peterson of Middlebury College, and Ngambal Shah of Spelman College.<br />
 The raw data is directly accessible from the following link:<br /> <https://chance.dartmouth.edu/course/Syllabi/Princeton96/ETSValidation.html><br /> 
-The dataset collects 1000 anonymous students' gender, SAT scores, high-school GPA, and first-year college GPA.<br /> 
+<br />The dataset collects 1000 anonymous students' gender, SAT scores, high-school GPA, and first-year college GPA.<br />
 <b>Format of the data     </b> A data frame with 1000 observations on the following 6 variables:<br/> 
 <ul>
     <li> sex: Gender of the student.
@@ -16,12 +16,12 @@ The dataset collects 1000 anonymous students' gender, SAT scores, high-school GP
     <li> hs_gpa: High school grade point average.
     <li> fy_gpa: First year (college) grade point average.
 </ul>
-<br /><b>Total number of records     </b> 1000 <br />
+<b>Total number of records     </b> 1000 <br />
 <b>Problem with the data     </b> The data does not give direct SAT scores.Rather, it gives the percentile of SAT scores. Therefore, normalizations might be applied before using.
 
 ### Dataset 2: Dartmouth Male and Female Students who take Psychology Courses' SAT and GPA
 These two datasets are collected by the same source as the prior dataset, Chance. Its attributes include SAT verbal, SAT math scores, SAT scores, total GPA, major GPA, and two Psych courses' GPA. The two datasets represent male students and female students respectively and are collected at the same time. They are accessible through the following links:<br /> <https://chance.dartmouth.edu/course/Syllabi/Princeton96/Dartmouth.men.html><br /> <https://chance.dartmouth.edu/course/Syllabi/Princeton96/Dartmouth.women.html><br />
-<b>Format of the data     </b> The following are the variables in these data sets:<br/> 
+<b>Format of the data     </b> The following are the variables in these data sets: 
 <ul>
     <li> SATV: Verval SAT scores
     <li> SATM: Math SAT scores
@@ -31,12 +31,12 @@ These two datasets are collected by the same source as the prior dataset, Chance
     <li> Psych10: Psych10 course grade, where NA represents not taking the course.
     <li> SAT: Total SAT scores 
 </ul>
-<br /><b>Total number of records     </b> 611
+<b>Total number of records     </b> 611
 
 ### Dataset 3: States SAT Scores in 2018
 This dataset is published by College Board, the 2018 SAT Suite of Assessments Annual Report, and it is accessible from the following link:<br />
 <https://reports.collegeboard.org/sat-suite-program-results><br />
-<b>Format of the data     </b> The Attributes include the following:<br/> 
+<b>Format of the data     </b> The Attributes include the following:
 <ul>
     <li> State: states of the United States
     <li> Participation: Participation rate of students in each state for SAT exam Evidence-Based 
@@ -44,7 +44,7 @@ This dataset is published by College Board, the 2018 SAT Suite of Assessments An
     <li> Math: State Average of SAT Math scores 
     <li> Total: State Average of total SAT scores 
 </ul>
-<br /><b>Total number of records     </b> 51
+<b>Total number of records     </b> 51
 <br /><b>Note:</b> This dataset counts the District of Columbia as a state.
 
 ### Dataset 4: California SAT Reports from 1998 to 2016
@@ -96,7 +96,7 @@ The first dataset is Child Population, by County by Race/Ethnicity. The table re
 </ul>
 
 
-### Dataset 6: KidsData.org's Child Population, by County by Age Group and Gender.
+### Dataset 6: KidsData.org's Child Population, by County by Age Group and Gender
 The second dataset is Child Population, by County by Age Group and Gender. Similarly to the previous dataset, it reports the percentage (or count) of children who identify with a list of age groups and genders in each county from 1995 to 2021. The following are all the options for age groups: Ages 0-2, Ages 3-5, Ages 6-10, Ages 11-13, Ages 14-17, and Total for Ages 0-17. The options for gender are Female and Male. The data is accessible through the following link:<br />
 <https://www.kidsdata.org/topic/34/child-population-age-gender/table#fmt=141&loc=2,127,347,1763,331,348,336,171,321,345,357,332,324,369,358,362,360,337,327,364,356,217,353,328,354,323,352,320,339,334,365,343,330,367,344,355,366,368,265,349,361,4,273,59,370,326,333,322,341,338,350,342,329,325,359,351,363,340,335&tf=141&ch=1433,926,927,1434,1435,372,78,77,79>
 
@@ -114,7 +114,7 @@ The second dataset is Child Population, by County by Age Group and Gender. Simil
     <li> Data: the statistic value
 </ul>
 
-### Dataset 7: KidsData.org's
+### Dataset 7: KidsData.org's Children in Poverty, by Race/Ethnicity (Regions of 10,000 Residents or More
 The final dataset is Children in Poverty, by Race/Ethnicity (Regions of 10,000 Residents or More). The table reports the percentage of children who live in poverty in each county from 2005 to 2018. The options for race and ethnicity are consistent with the first dataset. The data is accessible through the following link:<br />
 <https://www.kidsdata.org/topic/544/poverty-race-10k/table#fmt=727&loc=2,127,1763,331,348,336,171,321,345,357,332,324,369,358,362,360,337,327,364,356,217,353,328,354,352,320,339,334,365,343,330,367,344,355,366,368,265,349,361,4,273,59,370,326,322,341,338,350,342,329,325,359,351,363,340,335&tf=132&ch=7,11,726,10,72,9,73,1298>
 
@@ -493,5 +493,63 @@ sapply(map_data, function(x) sum(is.na(x)))
 ```
 
 ### Dataset 4
+The following are the missing data analyses for the <i>original, uncleaned</i> CSV files in this data set:
+<b>SAT1999</b>
+```{r}
+sapply(SAT1999, function(x) sum(is.na(x)))
+```
+<br /><b>SAT2001</b>
+```{r}
+sapply(SAT2001, function(x) sum(is.na(x)))
+```
+<br /><b>SAT2003</b>
+```{r}
+sapply(SAT2003, function(x) sum(is.na(x)))
+```
+<br /><b>SAT2005</b>
+```{r}
+sapply(SAT2005, function(x) sum(is.na(x)))
+```
+<br /><b>SAT2007</b>
+```{r}
+sapply(SAT2007, function(x) sum(is.na(x)))
+```
+<br /><b>SAT2009</b>
+```{r}
+sapply(SAT2009, function(x) sum(is.na(x)))
+```
+<br /><b>SAT2011</b>
+```{r}
+sapply(SAT2011, function(x) sum(is.na(x)))
+```
+<br /><b>SAT2013</b>
+```{r}
+sapply(SAT2013, function(x) sum(is.na(x)))
+```
+<br /><b>SAT2015</b>
+```{r}
+sapply(SAT2015, function(x) sum(is.na(x)))
+```
+<br /> We see here that the early years (i.e., 1999 and 2001) have pretty consistent misising value patterns: an input that misses one of the test-score-specific statistics, misses all of them. However, in the following years, the pattern is not as straight forward. There are two main reasons why this is so. First, the CDE changed the way it formatted its datasets. As a result, we start getting more group-leveled data, instead of just school-specific data for each row. This means that we are also accounting for rows that only have district data and county data, and thus miss other variables in the row. Additionally, the CDE and College Board numeric standards for which schools, districts, and counties they report SAT data for changed over the years—thus resulting in some schools, districts, and counties being included in the sheet, but not having any inputs.
 
 ### Dataset 5
+There are no missing values in this dataset.<br />
+```{r}
+sapply(white_kid_data, function(x) sum(is.na(x)))
+```
+
+### Dataset 6
+There are no missing values in any of these datasets.<br />
+```{r}
+sapply(gender_data_2005, function(x) sum(is.na(x)))
+sapply(gender_data_2009, function(x) sum(is.na(x)))
+sapply(gender_data_2013, function(x) sum(is.na(x)))
+```
+
+
+### Dataset 7
+For this dataset, we see that there is a smaller number of missing data from the <i>original, uncleaned</i> dataset. Upon further examination, we recognized that many of the missing data values are from counties that did not meet the threshold of having at least ten thousand residents for the years of interest. 
+```{r}
+sapply(poverty_data, function(x) sum(is.na(x)))
+```
+

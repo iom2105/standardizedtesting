@@ -1,7 +1,7 @@
 --- 
 title: "Standardized Testing"
 author: "Haolong Liu, Imani Oluwafumilayo Maliti"
-date: "`r Sys.Date()`"
+date: "2022-12-15"
 site: bookdown::bookdown_site
 ---
 

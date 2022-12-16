@@ -1,6 +1,6 @@
 # Interactive component
-In this section, we created two interactive visualizations to accompany our research and results, both of which were created and shared via the Vizhub platform. :<br />
-The first is a chloropleth map that shows the average SAT scores of each State in United States when the mouse hover on it. This map is accesible through the following link:<br />
+In this section, we created an interactive visualization to accompany our research and results, which was created and shared via the Vizhub platform.<br />
+It is a chloropleth map that shows the average SAT scores of each State in United States when the mouse hover on it. This map is accesible through the following link:<br />
 <https://vizhub.com/LONGLONGTOM/be7e78a2963d44b0aab8996a4c5c1bae?edit=files><br />
-The second is ...
+<br />
 

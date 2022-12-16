@@ -4,7 +4,7 @@ In this section, we will use exploratory data analysis to show relationships bet
 
 ## Correlation between SAT Scores and College GPA
 
-We first plot scatter plots to show correlations between SAT scores and college GPA. We can see from the graph that there is a positive correlation between SAT scores and college GPA. This means that, in general, students who score well on the SAT tend to have high GPAs in college. However, it's important to note that this relationship is not perfect, because the dots are rather scattered. We also introduced students' gender in the plot, and we can see that female students tend to have slightly higher GPAs than male students despite this difference is small.
+We first plot scatter plots to show correlations between SAT scores and college GPA. We can see from the graph that there is a positive correlation between SAT scores and college GPA. This means that, in general, students who score well on the SAT tend to have high GPAs in college. However, it's important to note that this relationship is not perfect, because the dots are rather scattered. We also introduced students' gender in the plot, and we can see that female students tend to have slightly higher GPAs than male students, despite the fact that this difference is small.
 
 ```{r}
 # all package used
@@ -68,7 +68,7 @@ ggplot(data2, aes(x = SAT, y=  Letter)) +
 
 ## Multidimensional Analysis
 
-In the plot, we used parallel coordinate plots to show relationship between high school GPA, College GPA, and SAT scores. To make our audiences easy to observe the relationship, we put College GPA in the middle. We can see that most of the times, both high school GPA and SAT scores are strong positively correlated with College GPA. Females have performed better as more of them are on the top of the graph. From the slope of the graph, we can see that high school GPA is slightly more positively correlated with college GPA, which means that high school GPA is a stronger indicator than SAT scores, but the differences are not very obvious. The positie relationships are not perfect, as there are many instances of high SAT scores or high school GPA that leads to low college GPA.
+In the plot, we used parallel coordinate plots to show relationship between high school GPA, College GPA, and SAT scores. To make our audiences easy to observe the relationship, we put College GPA in the middle. We can see that most of the times, both high school GPA and SAT scores are strong positively correlated with College GPA. Females have performed better as more of them are on the top of the graph. From the slope of the graph, we can see that high school GPA is slightly more positively correlated with college GPA, which means that high school GPA is a stronger indicator than SAT scores, but the differences are not very obvious. The positive relationships are not perfect, as there are many instances of high SAT scores or high school GPA that leads to low college GPA.
 
 ```{r}
 # parallel coordinate plot
@@ -82,7 +82,7 @@ ggparcoord(mod_data1, columns=c(2:4),groupColumn = "sex", alphaLines =0.3, scale
 
 ## State-wise Analysis
 
-In the state-wise analysis, we ploted, using spatial data, the average SAT performance of each state and its participation rates. As we can observe, SAT scores can vary greatly from one state to another. This could be due to on a variety of factors, such as the quality of the schools, the level of funding they receive, and the socioeconomic backgrounds of the students who take the test. However, one interesting finds here is that there seems to be negative correlations between average SAT scores and participation rates, which could be counter intuitive, because it is natural to think that higher paticipation rates mean the state does a good job at preparing its students for standardized tests.
+In the state-wise analysis, we plotted, using spatial data, the average SAT performance of each state and its participation rates. As we can observe, SAT scores can vary greatly from one state to another. This could be due to on a variety of factors, such as the quality of the schools, the level of funding they receive, and the socioeconomic backgrounds of the students who take the test. However, one interesting finds here is that there seems to be negative correlations between average SAT scores and participation rates, which could be counter intuitive, because it is natural to think that higher participation rates mean the state does a good job at preparing its students for standardized tests.
 
 ```{r}
 map_data = read.csv("SAT_State.csv")
@@ -115,12 +115,20 @@ ggplot(map_data, aes(x = evidence.based.reading.and.writing)) +
   geom_histogram(boundary = 500, closed = "left",color = "black", fill = "#3D6480", binwidth = 25)+ ylab("# of States") + xlab("Range of SAT Total Scores")+xlim(500, 675)
 ```
 
+```{r}
+#note: for anyone trying to recreate the upcoming two analyses, make sure to run the file data.Rmd in your environment first.
+```
+
 ## Analysis of California SAT Statistics over time
+For this analysis, we started by creating two heat maps. <br />
+We originallt wanted to make time series; however, for certain variables, the line graphs showcased a gradual incline from year to year, as opposed to the sharp increase that it was (i.e., the increase from a 0-valued Average writing score for tests before 2005 to the Average writing score to 2005, since the writing section did not exist prior to that year). To stay truthful to the data, we instead opted for a heat map to show to differences, or lack thereof, over time.<br />
+
 ```{r}
 library(stringr)
 library(dplyr)
 library(gridExtra)
 library(tidyr)
+library(grid)
 ```
 ```{r}
 tidy_SAT_nums <- select(SAT_all_means_years, year, avg_verbal, avg_math, avg_writing) |> 
@@ -129,21 +137,46 @@ tidy_SAT_nums <- select(SAT_all_means_years, year, avg_verbal, avg_math, avg_wri
 tidy_SAT_pers <- select(SAT_all_means_years, year, avg_total_per, avg_per_thresh) |> 
   pivot_longer(cols = !year, names_to = "type_of_stat", values_to = "stat_value")
 ```
-
+<br />The first showcases the patterns by year across the three main, non-percentage SAT statistics (i.e., Average Writing Score, Average Reading Score, and Average Math Score). The second showcases the patterns by year across the two main, percentage-based SAT statistics (i.e., Average total score represented as a percentage of the maximum possible score and the Average percentage of test takers who had at least an average score). These two maps were split as opposed to being joined together because they are on different scales—the first having variables that exist on a scale from 0 to 800 and the second from 0 to 100. Thus, to better understand what the data shows us, we provided the seperate heat maps.<br />
 ```{r}
 ggplot(tidy_SAT_nums, aes(year, type_of_stat, fill =stat_value)) +   
   geom_tile(color = "white") +  
   scale_x_discrete(limits=c(1999, 2001, 2003, 2005, 2007, 2009, 2011, 2013, 2015)) +
-  scale_fill_distiller(palette = "PuRd", direction = 1)
+  scale_fill_distiller(palette = "PuRd", direction = 1, name = "Score")+
+  ggtitle("Difference in Average SAT Scores by Section over the Years") +
+  ylab("Average of Section")
+```
 
+<br />We see from the first heat map that all of the scores for all of the sections seem to be very similar in value, and thus in hue. The only exception are the writing scores prior to 2005, which are all 0 because the writing section did not exist in those years. Just to ensure that the values are indeed similar and there is nothing wrong with the data, we created a barchart as evidence to our claim that there is no general difference in averages per section over the years.<br />
+
+```{r}
+evidence1 <- ggplot(SAT_all_means_years, aes(year, avg_writing)) + geom_bar(stat="identity") +
+  ylab("Average Writing Score")
+evidence2 <- ggplot(SAT_all_means_years, aes(year, avg_verbal)) + geom_bar(stat="identity") +
+  ylab("Average Verbal Score")
+evidence3 <- ggplot(SAT_all_means_years, aes(year, avg_math)) + geom_bar(stat="identity")+
+  ylab("Average Math Score")
+
+grid.arrange(evidence1, evidence2, evidence3, nrow = 1, top=textGrob("Average SAT Scores by Section over the Years"))
+```
+<br />We then moved on to look at the pecerntage data.<br />
+```{r}
 ggplot(tidy_SAT_pers, aes(year, type_of_stat, fill =stat_value)) +   
   geom_tile(color = "white") + 
   scale_x_discrete(limits=c(1999, 2001, 2003, 2005, 2007, 2009, 2011, 2013, 2015)) +
-  scale_fill_distiller(palette = "RdPu", direction = 1)
+  scale_fill_distiller(palette = "RdPu", direction = 1, name = "Percentage") +
+  ggtitle("Average SAT Percentage Statistics over the Years") +
+  ylab("Average Percentage Statistics")
 ```
+<br />For the second heatmap, we witness the same general pattern for the first variable (i.e.,Average total score represented as a percentage of the maximum possible score), in the sense that the values are very similar throughout the years; However, the variable representing the average percentage of test takers who had at least an average score has a lot more variability.<br />
+There are two distinct sections of that part of the heat map. All of the years prior to 2007 have very low values, while every year onward is significantly higher, with the highest being in 2009. This helps prove to us that although the changes in SAT standards did not effect the average scoring on each section, it did drastically affect the possibility of attaining at least an averagely competitive score. Therefore, it is sound to question how reliable using the SAT as a predictor of college performance is considering that its numerous shifts do alter how students perform.
 
 ## Analysis of Potential Demographic Biases of SAT
+For this analysis, we created a series of scatter plots to determine the following: does there exist any correlations between the average percentage of students within a county that achieve at least an average score and the percentages of specific socioeconomic demographics among children in said county? We pose this question, and its results, to see if SAT scores hold any bias. Our belief is that if SATs are widely used as a measure of college readiness and future academic performance, then it <i> should </i> be consistent amongst all races, genders, and economic incomes. Thus, there should not exist a correlation between these demographics that do not determine someone's intelligence and test that supposedly does. <br />
+<br />
+When looking for data sets to represent the measures for these socioeconomic children demographics in California, most of them had data that only dated back to 2005. Thus, based on this fact and the heat maps from the previous analysis, we decided to use data that represented the following years: 2005, 2009, and 2013. The year 2005 had the lowest average percent of students that achieved at least an average score, while 2009 had the highest, and 2013 was in the middle. 
 ### Race
+We start by looking at our Child Population, by County by Race/Ethnicity datasest. For ease and consistency, we specifically looked at data that showed the percentage of white children in a county for each year of interest. This is because in academia and society at large, whiteness is often chosen to be the "standard of normality". Any positive correlations between the percentage of white children and the average percent of students that achieved at least an average score will in turn mean that there is a negative correlation for the percentage of children belonging to marginalized race communities.<br />
 ```{r}
 avail_counties <- intersect(as.vector(SAT_all$County_Name), as.vector(white_kid_data$Location))
 white_kid_data_avail <- white_kid_data |> filter(is.element(Location, avail_counties) == TRUE)
@@ -157,28 +190,44 @@ SAT2005_means|>
   mutate(per_white = white_kid_2005$Data)|> 
   ggplot(aes(per_white, avg_per_thresh)) +
   geom_point() +
-  geom_smooth(method = "loess")
-
+  geom_smooth(method = "loess") +
+  ggtitle("Correlation btwn White Children & Achieving at least Average SAT Score in 2005") +
+  xlab("% white children per county") +
+  ylab("% of at least achieving average SAT score per county")
+```
+<br />In 2005, we see that there is a slight positive correlation between the two variables. The data shows that in this year, the higher the percent of white children in a county, the higher the average percent of students in that achieved at least an average score—which is inherently bias. However, this graph alone does not seem to have a terribly strong correlation, and thus, we will continue to look at the other years to see if the trend continues or if this is a stand-alone event.<br />
+```{r}
 #### 2009
 white_kid_2009 <- white_kid_data_avail |> filter(TimeFrame == 2009)
-SAT2009_means|> 
+scatter_white_2009 <- SAT2009_means|> 
   select(County_Name, avg_per_thresh) |> 
   mutate(per_white = white_kid_2009$Data)|> 
   ggplot(aes(per_white, avg_per_thresh)) +
   geom_point() +
-  geom_smooth(method = "loess")
+  geom_smooth(method = "loess") +
+  ggtitle("2009") +
+  xlab("% white children per county") +
+  ylab("% of at least achieving average SAT score per county")
 
 #### 2013
 white_kid_2013 <- white_kid_data_avail |> filter(TimeFrame == 2013)
-SAT2013_means|> 
+scatter_white_2013 <- SAT2013_means|> 
   select(County_Name, avg_per_thresh) |> 
   mutate(per_white = white_kid_2013$Data)|> 
   ggplot(aes(per_white, avg_per_thresh)) +
   geom_point() +
-  geom_smooth(method = "loess")
+  geom_smooth(method = "loess") +
+  ggtitle("2013") +
+  xlab("% white children per county") +
+  ylab("% of at least achieving average SAT score per county")
+
+#### arrange them side by side
+grid.arrange(scatter_white_2009, scatter_white_2013, nrow = 1, top = textGrob("Correlation btwn White Children & Achieving at least Average SAT Score"))
 ```
+<br />As we see here, in 2009 and 2015, not only does the trend continue, but its correlation becomes blatantly prominent. Both of these graphs continue to showcase that the higher the percent of white children in a county, the higher the average percent of students in that achieved at least an average score. This means that children attending schools in counties with higher percentages of non-white children are at a disadvantage, which is once again inherently bias. This rules out the SAT being considered a <i>fair</i> measure, at least when considering race.
 
 ### Gender
+Following, we looked at our Child Population, by County by Age Group and Gender dataset. Once again, for ease and consistency, we specifically looked at data that showed the percentage of male children in a county for each year of interest. Similar to our last analysis, we chose this because in academia and society at large, being male is often associated as the "standard of normality". Any positive correlations between the percentage of male children and the average percent of students that achieved at least an average score will in turn mean that there is a negative correlation for the percentage of female children.<br />
 ```{r}
 ###2005
 avail_2005_counties <- intersect(as.vector(SAT_all$County_Name), as.vector(gender_data_2005$Location))
@@ -192,15 +241,17 @@ male_data_2005 <- gender_2005_avail |> filter(Gender == "Male")
 male_data_2005 <- male_data_2005[order(male_data_2005$Location), ]
 
 
-SAT2005_means|> 
+scatter_male_2005 <- SAT2005_means|> 
   select(County_Name, avg_per_thresh) |> 
   mutate(num_male = as.numeric(male_data_2005$Data),
          num_total = as.numeric(total_gender_2005$Data),
          per_male = num_male / num_total * 100) |>
   ggplot(aes(per_male, avg_per_thresh)) +
   geom_point() +
-  geom_smooth(method = "loess")
-
+  geom_smooth(method = "loess") +
+  ggtitle("2005") +
+  xlab("% male children per county") +
+  ylab("% of at least achieving average SAT score per county")
 
 ###2009
 avail_2009_counties <- intersect(as.vector(SAT_all$County_Name), as.vector(gender_data_2009$Location))
@@ -214,15 +265,27 @@ male_data_2009 <- gender_2009_avail |> filter(Gender == "Male")
 male_data_2009 <- male_data_2009[order(male_data_2009$Location), ]
 
 
-SAT2009_means|> 
+scatter_male_2009 <- SAT2009_means|> 
   select(County_Name, avg_per_thresh) |> 
   mutate(num_male = as.numeric(male_data_2009$Data),
          num_total = as.numeric(total_gender_2009$Data),
          per_male = num_male / num_total * 100) |>
   ggplot(aes(per_male, avg_per_thresh)) +
   geom_point() +
-  geom_smooth(method = "loess")
+  geom_smooth(method = "loess") +
+  ggtitle("2009") +
+  xlab("% male children per county") +
+  ylab("% of at least achieving average SAT score per county")
 
+#### arranging them side by side
+grid.arrange(scatter_male_2005, scatter_male_2009, nrow = 1, top = textGrob("Correlation btwn Male Children & Achieving at least Average SAT Score"))
+```
+<br />Note, the scales for these two graphs, and the upcoming 2013 one, are different. We thought about making them cohesive so that readers may be able to easily read the values for each plot without having to reevaluate what the scales are; however, because there is such a huge difference in minimum and maximum values for each, making all of them on consistent scales would make it harder to see the trends in some. Moreover, we are more concerened about the movement/trends of the points, rather than the value the points hold themselves.<br />
+<br />
+With these scatter plots, we see that in 2005 and 2009, there is a negative correlation between the two variables. The data shows that in these years, the higher the percent of male children in a county, the lower the average percent of students in that achieved at least an average score. While this is bias, it was not the type of bias that we had originally hypothesized considering the undisputed misogynistic nature and history of academia. We also thought this was interesting since most of the counties have a majority (i.e., over 50%) of male children. It's interesting to see that not even the number of males possibly taking the SAT would increase their chances of collectively scoring higher (or at least average).<br />
+<br />
+Upon looking at the plots some more, we also noticed that in both graphs there are sections on the x-axis where the points are more densely populated and take up larger ranges on the y-axis. In 2005, the counties with anywhere from 51 to 52 percent of male children 1) were the vast majority of the data and 2) had y-values from as low 5% to as high as 45%. In 2009, we see a similar trend with the counties that had around the same percentages of male children; however, their y-values ranged from under 30% to almost 80%. It can be argued that because of these densely populated areas on the plot, it's harder for us to truly determine if there is a correlation based on visualizations alone. This may call for a much deeper analysis, or simply more extensive data. Nevertheless, we showcase our results for 2013, as well.<br />
+```{r}
 ###2013
 avail_2013_counties <- intersect(as.vector(SAT_all$County_Name), as.vector(gender_data_2013$Location))
 gender_2013_avail <- gender_data_2013 |> filter(is.element(Location, avail_2013_counties) == TRUE)
@@ -242,33 +305,55 @@ SAT2013_means|>
          per_male = num_male / num_total * 100) |>
   ggplot(aes(per_male, avg_per_thresh)) +
   geom_point() +
-  geom_smooth(method = "loess")
+  geom_smooth(method = "loess") +
+  ggtitle("Correlation btwn White Children & Achieving at least Average SAT Score in 2013") +
+  xlab("% male children per county") +
+  ylab("% of at least achieving average SAT score per county")
+  
 ```
+<br />As we see here, in 2013, the <i>possible</i> correlation trend does not continue. In fact, there does not seem to be any correlation with the data for this year. Nevertheless, we do see the majority of values with the largest y-value ranges within that 51% to 52% range. While these visualization do not necessarily provide evidence that the SAT may not be considered a fair measure when considering gender, it does bring up grounds to do further research on.
 
 ### Poverty
+We start by looking at our Children in Poverty, by Race/Ethnicity (Regions of 10,000 Residents or More) dataset. Specifically, this dataset showed us the percentage of children in a county living in poverty for each year of interest. Any begative correlations between the percentage of impoverished (i.e., poor) children and the average percent of students that achieved at least an average score will in turn mean that there is a positive correlation for the percentage of children belonging to more financially stable households.<br />
 ```{r}
-#2005
+#### 2005
 SAT2005_poverty_counties|> 
   select(County_Name, avg_per_thresh) |> 
   mutate(per_poverty = as.numeric(poverty_2005$Data)) |>
   ggplot(aes(per_poverty, avg_per_thresh)) +
   geom_point() +
-  geom_smooth(method = "loess")
+  geom_smooth(method = "loess") +
+  ggtitle("Correlation btwn Poor Children & Achieving at least Average SAT Score in 2005") +
+  xlab("% impoverished children per county") +
+  ylab("% of at least achieving average SAT score per county")
+```
+<br /> In 2005, we see that there is a drastic negative correlation between the two variables. The data shows that in this year, the higher the percent of impoverished children in a county, the lower the average percent of students in that achieved at least an average score. This means that children who attend schools in counties with higher percentages of children in poverty are at a disadvantage, which is inherently bias. Nevertheless, we will continue to look at the other years to see if the trend continues or if this is a stand-alone event.<br />
 
-#2009
-SAT2009_poverty_counties|> 
+```{r}
+#### 2009
+scatter_poverty_2009 <- SAT2009_poverty_counties|> 
   select(County_Name, avg_per_thresh) |> 
   mutate(per_poverty = as.numeric(poverty_2009$Data)) |>
   ggplot(aes(per_poverty, avg_per_thresh)) +
   geom_point() +
-  geom_smooth(method = "loess")
+  geom_smooth(method = "loess") +
+  ggtitle("2009") +
+  xlab("% impoverished children per county") +
+  ylab("% of at least achieving average SAT score per county")
 
-#2013
-SAT2013_poverty_counties|> 
+#### 2013
+scatter_poverty_2013 <-SAT2013_poverty_counties|> 
   select(County_Name, avg_per_thresh) |> 
   mutate(per_poverty = as.numeric(poverty_2013$Data)) |>
   ggplot(aes(per_poverty, avg_per_thresh)) +
   geom_point() +
-  geom_smooth(method = "loess")
-```
+  geom_smooth(method = "loess") +
+  ggtitle("2013") +
+  xlab("% impoverished children per county") +
+  ylab("% of at least achieving average SAT score per county")
 
+#### arrange them side by side
+grid.arrange(scatter_poverty_2009, scatter_poverty_2013, nrow = 1, top = textGrob("Correlation btwn Poor Children & Achieving at least Average SAT Score"))
+
+```
+<br />As we see here, in 2009 and 2015, not only does the trend continue, but its correlation stays prominent. Both of these graphs continue to showcase that the higher the percent of impoverished children in a county, the lower the average percent of students in that achieved at least an average score. This means that children attending schools in counties with higher percentages of non-white children are at a disadvantage, which is once again inherently bias. Altogether, these graphs serve as evidence that rules out the SAT being considered a <i>fair</i> measure, at least when considering income status.
