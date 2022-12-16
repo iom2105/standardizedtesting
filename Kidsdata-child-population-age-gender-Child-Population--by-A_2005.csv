@@ -1,0 +1,117 @@
+FIPSCode,LocationType,Location,AgeGroup,Gender,TimeFrame,DataFormat,Data
+6001,County,Alameda,Total for Ages 0_17,Male,2005,Number,181306
+6003,County,Alpine,Total for Ages 0_17,Male,2005,Number,116
+6009,County,Calaveras,Total for Ages 0_17,Male,2005,Number,4671
+6011,County,Colusa,Total for Ages 0_17,Male,2005,Number,3171
+6013,County,Contra Costa,Total for Ages 0_17,Male,2005,Number,131479
+6017,County,El Dorado,Total for Ages 0_17,Male,2005,Number,21379
+6019,County,Fresno,Total for Ages 0_17,Male,2005,Number,138988
+6021,County,Glenn,Total for Ages 0_17,Male,2005,Number,4125
+6027,County,Inyo,Total for Ages 0_17,Male,2005,Number,2022
+6029,County,Kern,Total for Ages 0_17,Male,2005,Number,122761
+6031,County,Kings,Total for Ages 0_17,Male,2005,Number,21309
+6037,County,Los Angeles,Total for Ages 0_17,Male,2005,Number,1348937
+6039,County,Madera,Total for Ages 0_17,Male,2005,Number,21231
+6041,County,Marin,Total for Ages 0_17,Male,2005,Number,25412
+6045,County,Mendocino,Total for Ages 0_17,Male,2005,Number,10358
+6047,County,Merced,Total for Ages 0_17,Male,2005,Number,40200
+6049,County,Modoc,Total for Ages 0_17,Male,2005,Number,1072
+6055,County,Napa,Total for Ages 0_17,Male,2005,Number,16198
+6057,County,Nevada,Total for Ages 0_17,Male,2005,Number,10508
+6059,County,Orange,Total for Ages 0_17,Male,2005,Number,400740
+6003,County,Alpine,Total for Ages 0_17,Total,2005,Number,238
+6005,County,Amador,Total for Ages 0_17,Total,2005,Number,7347
+6065,County,Riverside,Total for Ages 0_17,Male,2005,Number,295423
+6067,County,Sacramento,Total for Ages 0_17,Male,2005,Number,185674
+6073,County,San Diego,Total for Ages 0_17,Male,2005,Number,380520
+6075,County,San Francisco,Total for Ages 0_17,Male,2005,Number,57271
+6077,County,San Joaquin,Total for Ages 0_17,Male,2005,Number,101536
+6083,County,Santa Barbara,Total for Ages 0_17,Male,2005,Number,51839
+6085,County,Santa Clara,Total for Ages 0_17,Male,2005,Number,217344
+6087,County,Santa Cruz,Total for Ages 0_17,Male,2005,Number,29174
+6091,County,Sierra,Total for Ages 0_17,Male,2005,Number,330
+6093,County,Siskiyou,Total for Ages 0_17,Male,2005,Number,4888
+6095,County,Solano,Total for Ages 0_17,Male,2005,Number,55314
+6101,County,Sutter,Total for Ages 0_17,Male,2005,Number,12830
+6103,County,Tehama,Total for Ages 0_17,Male,2005,Number,7885
+6105,County,Trinity,Total for Ages 0_17,Male,2005,Number,1342
+6111,County,Ventura,Total for Ages 0_17,Male,2005,Number,111552
+6113,County,Yolo,Total for Ages 0_17,Male,2005,Number,23292
+6115,County,Yuba,Total for Ages 0_17,Male,2005,Number,10421
+6005,County,Amador,Total for Ages 0_17,Male,2005,Number,3952
+6007,County,Butte,Total for Ages 0_17,Total,2005,Number,49075
+6013,County,Contra Costa,Total for Ages 0_17,Total,2005,Number,256339
+6015,County,Del Norte,Total for Ages 0_17,Total,2005,Number,6386
+6017,County,El Dorado,Total for Ages 0_17,Total,2005,Number,41480
+6021,County,Glenn,Total for Ages 0_17,Total,2005,Number,8041
+6023,County,Humboldt,Total for Ages 0_17,Total,2005,Number,28236
+6025,County,Imperial,Total for Ages 0_17,Total,2005,Number,48127
+6031,County,Kings,Total for Ages 0_17,Total,2005,Number,41053
+6033,County,Lake,Total for Ages 0_17,Total,2005,Number,13932
+6035,County,Lassen,Total for Ages 0_17,Total,2005,Number,6891
+6041,County,Marin,Total for Ages 0_17,Total,2005,Number,49288
+6043,County,Mariposa,Total for Ages 0_17,Total,2005,Number,3398
+6045,County,Mendocino,Total for Ages 0_17,Total,2005,Number,20141
+6049,County,Modoc,Total for Ages 0_17,Total,2005,Number,2050
+6051,County,Mono,Total for Ages 0_17,Total,2005,Number,2968
+6053,County,Monterey,Total for Ages 0_17,Total,2005,Number,114692
+6059,County,Orange,Total for Ages 0_17,Total,2005,Number,782159
+6061,County,Placer,Total for Ages 0_17,Total,2005,Number,77730
+6063,County,Plumas,Total for Ages 0_17,Total,2005,Number,4111
+6069,County,San Benito,Total for Ages 0_17,Total,2005,Number,16624
+6071,County,San Bernardino,Total for Ages 0_17,Total,2005,Number,605887
+6073,County,San Diego,Total for Ages 0_17,Total,2005,Number,742647
+6077,County,San Joaquin,Total for Ages 0_17,Total,2005,Number,197310
+6079,County,San Luis Obispo,Total for Ages 0_17,Total,2005,Number,53041
+6081,County,San Mateo,Total for Ages 0_17,Total,2005,Number,156146
+6087,County,Santa Cruz,Total for Ages 0_17,Total,2005,Number,56672
+6089,County,Shasta,Total for Ages 0_17,Total,2005,Number,41512
+6091,County,Sierra,Total for Ages 0_17,Total,2005,Number,602
+6095,County,Solano,Total for Ages 0_17,Total,2005,Number,107969
+6097,County,Sonoma,Total for Ages 0_17,Total,2005,Number,109846
+6099,County,Stanislaus,Total for Ages 0_17,Total,2005,Number,148813
+6105,County,Trinity,Total for Ages 0_17,Total,2005,Number,2620
+6107,County,Tulare,Total for Ages 0_17,Total,2005,Number,134781
+6109,County,Tuolumne,Total for Ages 0_17,Total,2005,Number,10580
+6115,County,Yuba,Total for Ages 0_17,Total,2005,Number,20258
+6001,County,Alameda,Total for Ages 0_17,Total,2005,Number,354877
+6007,County,Butte,Total for Ages 0_17,Male,2005,Number,25318
+6009,County,Calaveras,Total for Ages 0_17,Total,2005,Number,8993
+6011,County,Colusa,Total for Ages 0_17,Total,2005,Number,6124
+6015,County,Del Norte,Total for Ages 0_17,Male,2005,Number,3303
+6019,County,Fresno,Total for Ages 0_17,Total,2005,Number,271858
+6023,County,Humboldt,Total for Ages 0_17,Male,2005,Number,14394
+6025,County,Imperial,Total for Ages 0_17,Male,2005,Number,24745
+6027,County,Inyo,Total for Ages 0_17,Total,2005,Number,3938
+6029,County,Kern,Total for Ages 0_17,Total,2005,Number,238528
+6033,County,Lake,Total for Ages 0_17,Male,2005,Number,7196
+6035,County,Lassen,Total for Ages 0_17,Male,2005,Number,3729
+6037,County,Los Angeles,Total for Ages 0_17,Total,2005,Number,2637771
+6039,County,Madera,Total for Ages 0_17,Total,2005,Number,41120
+6043,County,Mariposa,Total for Ages 0_17,Male,2005,Number,1713
+6047,County,Merced,Total for Ages 0_17,Total,2005,Number,77917
+6051,County,Mono,Total for Ages 0_17,Male,2005,Number,1501
+6053,County,Monterey,Total for Ages 0_17,Male,2005,Number,59161
+6055,County,Napa,Total for Ages 0_17,Total,2005,Number,31410
+6057,County,Nevada,Total for Ages 0_17,Total,2005,Number,20279
+6061,County,Placer,Total for Ages 0_17,Male,2005,Number,39842
+6063,County,Plumas,Total for Ages 0_17,Male,2005,Number,2095
+6065,County,Riverside,Total for Ages 0_17,Total,2005,Number,577511
+6067,County,Sacramento,Total for Ages 0_17,Total,2005,Number,363262
+6069,County,San Benito,Total for Ages 0_17,Male,2005,Number,8594
+6071,County,San Bernardino,Total for Ages 0_17,Male,2005,Number,311000
+6075,County,San Francisco,Total for Ages 0_17,Total,2005,Number,113840
+6079,County,San Luis Obispo,Total for Ages 0_17,Male,2005,Number,27877
+6081,County,San Mateo,Total for Ages 0_17,Male,2005,Number,80427
+6083,County,Santa Barbara,Total for Ages 0_17,Total,2005,Number,100683
+6085,County,Santa Clara,Total for Ages 0_17,Total,2005,Number,421747
+6089,County,Shasta,Total for Ages 0_17,Male,2005,Number,21459
+6093,County,Siskiyou,Total for Ages 0_17,Total,2005,Number,9515
+6097,County,Sonoma,Total for Ages 0_17,Male,2005,Number,56488
+6099,County,Stanislaus,Total for Ages 0_17,Male,2005,Number,76417
+6101,County,Sutter,Total for Ages 0_17,Total,2005,Number,24733
+6103,County,Tehama,Total for Ages 0_17,Total,2005,Number,15391
+6107,County,Tulare,Total for Ages 0_17,Male,2005,Number,69057
+6109,County,Tuolumne,Total for Ages 0_17,Male,2005,Number,5580
+6111,County,Ventura,Total for Ages 0_17,Total,2005,Number,217207
+6113,County,Yolo,Total for Ages 0_17,Total,2005,Number,45588

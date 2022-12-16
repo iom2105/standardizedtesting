@@ -1,1 +1,144 @@
 # Results
+
+In this section, we will use exploratory data analysis to show relationships between high school GPA, SAT scores, and college GPA.
+
+## Correlation between SAT Scores and College GPA
+
+We first plot scatter plots to show correlations between SAT scores and college GPA. We can see from the graph that there is a positive correlation between SAT scores and college GPA. This means that, in general, students who score well on the SAT tend to have high GPAs in college. However, it's important to note that this relationship is not perfect, because the dots are rather scattered. We also introduced students' gender in the plot, and we can see that female students tend to have slightly higher GPAs than male students despite this difference is small.
+
+```{r}
+# all package used
+library(dplyr)
+library(imputeTS)
+library(ggplot2)
+library(ggridges)
+library(forcats)
+library(GGally)
+library(reshape2)
+library(usmap)
+
+#read in data and perform data cleaning
+data1 <- read.csv("satgpa.csv")
+data2 <- read.csv("combined_data2.csv")
+data1$sat_total = data1$sat_sum/2
+
+na_mean(data2)
+
+for(i in 1:nrow(data1)){
+    if(data1$sex[i]=="1"){
+        data1$sex[i]="Male"
+    }
+    else{
+      data1$sex[i]="Female"
+    }
+}
+
+# scatter plot to show correlation
+
+scatterPlot <- ggplot(data2,aes(SAT, MGPA, color=SEX)) + 
+  geom_point() + 
+  scale_color_manual(values = c('#999999','#E69F00')) + 
+  theme(legend.position=c(0,1), legend.justification=c(0,1)) +
+  geom_smooth(method=lm, se=FALSE, fullrange=TRUE)+
+  labs(title="Male/Female Major GPA VS SAT Scores",
+       x="SAT Scores", y = "Major GPA")
+scatterPlot
+```
+
+We then plotted Letter grade VS SAT scores. Taking a breakdown of GPA helps us understand how SAT scores truly affect College performance. The skewness of plots varies with regard to letter grades, and while most of them have one peak, C+ and C- have two peaks. It is very obvious that students with lower SAT scores perform worse most of the times, but students with higher SAT scores are not guranteed to perform better. For example, with a SAT score of 1300, the probability of him/she receives C- or B+ is similar. The information could help the admission in that while students with higher SAT scores should be considered with high priority, but as long as they pass the bar, other qualities will matter more than one simple score.
+
+```{r}
+# Change GPA to letter grade
+data2$Letter =ifelse(data2$MGPA >3.7, "A",
+              ifelse(data2$MGPA >3.3, "A-",
+              ifelse(data2$MGPA >3.0, "B+",
+              ifelse(data2$MGPA >2.7, "B",
+              ifelse(data2$MGPA >2.3, "B-",
+              ifelse(data2$MGPA >2.0, "C+", 
+              ifelse(data2$MGPA >1.7, "C", "C-" 
+)))))))
+
+# RidgeLine Plot
+data2$Letter <- factor(data2$Letter, levels = c("C-","C","C+","B-","B","B+","A-","A"))
+ggplot(data2, aes(x = SAT, y=  Letter)) +
+  geom_density_ridges() +
+  ggtitle("SAT vs Letter Grade") +
+  ylab("Letter Grade")
+```
+
+## Multidimensional Analysis
+
+In the plot, we used parallel coordinate plots to show relationship between high school GPA, College GPA, and SAT scores. To make our audiences easy to observe the relationship, we put College GPA in the middle. We can see that most of the times, both high school GPA and SAT scores are strong positively correlated with College GPA. Females have performed better as more of them are on the top of the graph. From the slope of the graph, we can see that high school GPA is slightly more positively correlated with college GPA, which means that high school GPA is a stronger indicator than SAT scores, but the differences are not very obvious. The positie relationships are not perfect, as there are many instances of high SAT scores or high school GPA that leads to low college GPA.
+
+```{r}
+# parallel coordinate plot
+#Use only distinct values
+mod_data1 <- unique(data1[ , c("sex","hs_gpa", "fy_gpa", "sat_total")])     
+
+ggparcoord(mod_data1, columns=c(2:4),groupColumn = "sex", alphaLines =0.3, scale='uniminmax', boxplot = TRUE,
+           title = "Parallel coordinate plot for High School GPA, College GPA, and SAT Scores") + scale_color_brewer(palette = "Set2")
+
+```
+
+## State-wise Analysis
+
+In the state-wise analysis, we ploted, using spatial data, the average SAT performance of each state and its participation rates. As we can observe, SAT scores can vary greatly from one state to another. This could be due to on a variety of factors, such as the quality of the schools, the level of funding they receive, and the socioeconomic backgrounds of the students who take the test. However, one interesting finds here is that there seems to be negative correlations between average SAT scores and participation rates, which could be counter intuitive, because it is natural to think that higher paticipation rates mean the state does a good job at preparing its students for standardized tests.
+
+```{r}
+map_data = read.csv("SAT_State.csv")
+names(map_data) <- tolower(names(map_data))
+map_data$state = tolower(map_data$state)
+map_data$participation = as.numeric(sub("%", "", map_data$participation))
+
+plot_usmap(data = map_data, values = "total") + 
+  scale_fill_continuous(low = 'white', high = "Black", name = "SAT Scores", label = scales::comma) + 
+  theme(legend.position = "right")+  ggtitle("SAT State-wise Scores")
+
+plot_usmap(data = map_data, values = "participation") + 
+  scale_fill_continuous(low = 'white', high = "Black", name = "SAT Scores", label = scales::comma) + 
+  theme(legend.position = "right")+  ggtitle("SAT State-wise Participation Rates (%)")
+```
+Total SAT score histogram is symmetrical with one peak. Majority of them performed averagely, and none performed very well or very poorly.SAT Math score histogram is skewed to the left. More students perform poorly, and only very few perform very well.
+The histograms for SAT verbal are bimodal, indicating that students tend to perform either very poorly or very well.
+
+```{r}
+ggplot(map_data, aes(x = total)) +
+  ggtitle("SAT Average Total State Scores") +
+  geom_histogram(boundary = 1000, closed = "left", color = "black", fill = "#3D6480", binwidth = 50)+ ylab("# of States") + xlab("Range of SAT Total Scores") +xlim(1000, 1350)
+
+ggplot(map_data, aes(x = math)) +
+  ggtitle("SAT Average Math State Scores") +
+  geom_histogram(boundary = 500, closed = "left",color = "black", fill = "#3D6480", binwidth = 25)+ ylab("# of States") + xlab("Range of SAT Total Scores") +xlim(500, 700)
+
+ggplot(map_data, aes(x = evidence.based.reading.and.writing)) +
+  ggtitle("SAT Average Verbal State Scores") +
+  geom_histogram(boundary = 500, closed = "left",color = "black", fill = "#3D6480", binwidth = 25)+ ylab("# of States") + xlab("Range of SAT Total Scores")+xlim(500, 675)
+```
+
+## Analysis of California SAT Statistics over time
+```{r}
+library(stringr)
+library(dplyr)
+library(gridExtra)
+library(tidyr)
+```
+```{r}
+tidy_SAT_nums <- select(SAT_all_means_years, year, avg_verbal, avg_math, avg_writing) |> 
+  pivot_longer(cols = !year, names_to = "type_of_stat", values_to = "stat_value")
+
+tidy_SAT_pers <- select(SAT_all_means_years, year, avg_total_per, avg_per_thresh) |> 
+  pivot_longer(cols = !year, names_to = "type_of_stat", values_to = "stat_value")
+```
+
+```{r}
+ggplot(tidy_SAT_nums, aes(year, type_of_stat, fill =stat_value)) +   
+  geom_tile(color = "white") +  
+  scale_x_discrete(limits=c(1999, 2001, 2003, 2005, 2007, 2009, 2011, 2013, 2015)) +
+  scale_fill_distiller(palette = "PuRd", direction = 1)
+
+ggplot(tidy_SAT_pers, aes(year, type_of_stat, fill =stat_value)) +   
+  geom_tile(color = "white") + 
+  scale_x_discrete(limits=c(1999, 2001, 2003, 2005, 2007, 2009, 2011, 2013, 2015)) +
+  scale_fill_distiller(palette = "RdPu", direction = 1)
+```
+

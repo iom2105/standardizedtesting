@@ -1,0 +1,291 @@
+FIPSCode,LocationType,Location,Race_Ethnicity,TimeFrame,DataFormat,Data
+6001,County,Alameda,White,2005,Percent,26.7
+6001,County,Alameda,White,2007,Percent,25.3
+6001,County,Alameda,White,2009,Percent,23.7
+6001,County,Alameda,White,2011,Percent,23.6
+6001,County,Alameda,White,2013,Percent,24.3
+6003,County,Alpine,White,2005,Percent,55.0
+6003,County,Alpine,White,2007,Percent,56.7
+6003,County,Alpine,White,2009,Percent,57.1
+6003,County,Alpine,White,2011,Percent,59.0
+6003,County,Alpine,White,2013,Percent,55.2
+6005,County,Amador,White,2005,Percent,74.9
+6005,County,Amador,White,2007,Percent,73.6
+6005,County,Amador,White,2009,Percent,72.7
+6005,County,Amador,White,2011,Percent,73.0
+6005,County,Amador,White,2013,Percent,72.6
+6007,County,Butte,White,2005,Percent,66.0
+6007,County,Butte,White,2007,Percent,64.7
+6007,County,Butte,White,2009,Percent,61.5
+6007,County,Butte,White,2011,Percent,61.6
+6007,County,Butte,White,2013,Percent,61.8
+6009,County,Calaveras,White,2005,Percent,77.5
+6009,County,Calaveras,White,2007,Percent,76.3
+6009,County,Calaveras,White,2009,Percent,75.3
+6009,County,Calaveras,White,2011,Percent,74.4
+6009,County,Calaveras,White,2013,Percent,73.8
+6011,County,Colusa,White,2005,Percent,30.1
+6011,County,Colusa,White,2007,Percent,28.1
+6011,County,Colusa,White,2009,Percent,26.5
+6011,County,Colusa,White,2011,Percent,24.9
+6011,County,Colusa,White,2013,Percent,24.9
+6013,County,Contra Costa,White,2005,Percent,42.2
+6013,County,Contra Costa,White,2007,Percent,40.4
+6013,County,Contra Costa,White,2009,Percent,38.9
+6013,County,Contra Costa,White,2011,Percent,35.8
+6013,County,Contra Costa,White,2013,Percent,35.7
+6015,County,Del Norte,White,2005,Percent,60.0
+6015,County,Del Norte,White,2007,Percent,58.4
+6015,County,Del Norte,White,2009,Percent,57.3
+6015,County,Del Norte,White,2011,Percent,54.9
+6015,County,Del Norte,White,2013,Percent,54.8
+6017,County,El Dorado,White,2005,Percent,74.8
+6017,County,El Dorado,White,2007,Percent,73.5
+6017,County,El Dorado,White,2009,Percent,72.1
+6017,County,El Dorado,White,2011,Percent,69.6
+6017,County,El Dorado,White,2013,Percent,69.3
+6019,County,Fresno,White,2005,Percent,23.9
+6019,County,Fresno,White,2007,Percent,22.7
+6019,County,Fresno,White,2009,Percent,21.2
+6019,County,Fresno,White,2011,Percent,20.5
+6019,County,Fresno,White,2013,Percent,20.7
+6021,County,Glenn,White,2005,Percent,45.6
+6021,County,Glenn,White,2007,Percent,45.3
+6021,County,Glenn,White,2009,Percent,44.7
+6021,County,Glenn,White,2011,Percent,40.9
+6021,County,Glenn,White,2013,Percent,41.2
+6023,County,Humboldt,White,2005,Percent,68.0
+6023,County,Humboldt,White,2007,Percent,66.3
+6023,County,Humboldt,White,2009,Percent,64.3
+6023,County,Humboldt,White,2011,Percent,63.8
+6023,County,Humboldt,White,2013,Percent,64.3
+6025,County,Imperial,White,2005,Percent,9.8
+6025,County,Imperial,White,2007,Percent,9.1
+6025,County,Imperial,White,2009,Percent,8.6
+6025,County,Imperial,White,2011,Percent,8.0
+6025,County,Imperial,White,2013,Percent,8.5
+6027,County,Inyo,White,2005,Percent,52.6
+6027,County,Inyo,White,2007,Percent,50.2
+6027,County,Inyo,White,2009,Percent,48.2
+6027,County,Inyo,White,2011,Percent,45.6
+6027,County,Inyo,White,2013,Percent,45.7
+6029,County,Kern,White,2005,Percent,31.7
+6029,County,Kern,White,2007,Percent,29.9
+6029,County,Kern,White,2009,Percent,28.3
+6029,County,Kern,White,2011,Percent,26.9
+6029,County,Kern,White,2013,Percent,27.1
+6031,County,Kings,White,2005,Percent,29.9
+6031,County,Kings,White,2007,Percent,28.4
+6031,County,Kings,White,2009,Percent,26.8
+6031,County,Kings,White,2011,Percent,26.0
+6031,County,Kings,White,2013,Percent,26.2
+6033,County,Lake,White,2005,Percent,65.0
+6033,County,Lake,White,2007,Percent,63.2
+6033,County,Lake,White,2009,Percent,60.8
+6033,County,Lake,White,2011,Percent,58.3
+6033,County,Lake,White,2013,Percent,58.2
+6035,County,Lassen,White,2005,Percent,72.8
+6035,County,Lassen,White,2007,Percent,72.5
+6035,County,Lassen,White,2009,Percent,73.2
+6035,County,Lassen,White,2011,Percent,70.0
+6035,County,Lassen,White,2013,Percent,70.3
+6037,County,Los Angeles,White,2005,Percent,18.8
+6037,County,Los Angeles,White,2007,Percent,18.0
+6037,County,Los Angeles,White,2009,Percent,17.1
+6037,County,Los Angeles,White,2011,Percent,17.8
+6037,County,Los Angeles,White,2013,Percent,18.0
+6039,County,Madera,White,2005,Percent,28.2
+6039,County,Madera,White,2007,Percent,26.7
+6039,County,Madera,White,2009,Percent,25.4
+6039,County,Madera,White,2011,Percent,23.3
+6039,County,Madera,White,2013,Percent,23.1
+6041,County,Marin,White,2005,Percent,66.8
+6041,County,Marin,White,2007,Percent,66.0
+6041,County,Marin,White,2009,Percent,66.0
+6041,County,Marin,White,2011,Percent,62.9
+6041,County,Marin,White,2013,Percent,62.3
+6043,County,Mariposa,White,2005,Percent,77.8
+6043,County,Mariposa,White,2007,Percent,76.8
+6043,County,Mariposa,White,2009,Percent,75.1
+6043,County,Mariposa,White,2011,Percent,74.0
+6043,County,Mariposa,White,2013,Percent,73.0
+6045,County,Mendocino,White,2005,Percent,55.3
+6045,County,Mendocino,White,2007,Percent,53.1
+6045,County,Mendocino,White,2009,Percent,51.4
+6045,County,Mendocino,White,2011,Percent,49.4
+6045,County,Mendocino,White,2013,Percent,49.5
+6047,County,Merced,White,2005,Percent,24.8
+6047,County,Merced,White,2007,Percent,23.2
+6047,County,Merced,White,2009,Percent,21.4
+6047,County,Merced,White,2011,Percent,20.9
+6047,County,Merced,White,2013,Percent,21.2
+6049,County,Modoc,White,2005,Percent,69.0
+6049,County,Modoc,White,2007,Percent,68.4
+6049,County,Modoc,White,2009,Percent,67.6
+6049,County,Modoc,White,2011,Percent,66.6
+6049,County,Modoc,White,2013,Percent,68.8
+6051,County,Mono,White,2005,Percent,55.6
+6051,County,Mono,White,2007,Percent,52.7
+6051,County,Mono,White,2009,Percent,50.3
+6051,County,Mono,White,2011,Percent,47.1
+6051,County,Mono,White,2013,Percent,46.8
+6053,County,Monterey,White,2005,Percent,22.3
+6053,County,Monterey,White,2007,Percent,21.0
+6053,County,Monterey,White,2009,Percent,19.0
+6053,County,Monterey,White,2011,Percent,18.3
+6053,County,Monterey,White,2013,Percent,18.6
+6055,County,Napa,White,2005,Percent,48.2
+6055,County,Napa,White,2007,Percent,46.6
+6055,County,Napa,White,2009,Percent,45.7
+6055,County,Napa,White,2011,Percent,38.2
+6055,County,Napa,White,2013,Percent,38.3
+6057,County,Nevada,White,2005,Percent,81.3
+6057,County,Nevada,White,2007,Percent,80.4
+6057,County,Nevada,White,2009,Percent,79.6
+6057,County,Nevada,White,2011,Percent,77.1
+6057,County,Nevada,White,2013,Percent,76.7
+6059,County,Orange,White,2005,Percent,36.2
+6059,County,Orange,White,2007,Percent,34.9
+6059,County,Orange,White,2009,Percent,33.5
+6059,County,Orange,White,2011,Percent,32.0
+6059,County,Orange,White,2013,Percent,31.7
+6061,County,Placer,White,2005,Percent,72.0
+6061,County,Placer,White,2007,Percent,70.0
+6061,County,Placer,White,2009,Percent,68.1
+6061,County,Placer,White,2011,Percent,66.9
+6061,County,Placer,White,2013,Percent,66.6
+6063,County,Plumas,White,2005,Percent,77.8
+6063,County,Plumas,White,2007,Percent,76.9
+6063,County,Plumas,White,2009,Percent,75.6
+6063,County,Plumas,White,2011,Percent,73.7
+6063,County,Plumas,White,2013,Percent,73.3
+6065,County,Riverside,White,2005,Percent,31.1
+6065,County,Riverside,White,2007,Percent,29.2
+6065,County,Riverside,White,2009,Percent,27.6
+6065,County,Riverside,White,2011,Percent,26.1
+6065,County,Riverside,White,2013,Percent,26.3
+6067,County,Sacramento,White,2005,Percent,41.1
+6067,County,Sacramento,White,2007,Percent,39.0
+6067,County,Sacramento,White,2009,Percent,37.1
+6067,County,Sacramento,White,2011,Percent,36.0
+6067,County,Sacramento,White,2013,Percent,36.1
+6069,County,San Benito,White,2005,Percent,31.1
+6069,County,San Benito,White,2007,Percent,28.8
+6069,County,San Benito,White,2009,Percent,26.5
+6069,County,San Benito,White,2011,Percent,25.5
+6069,County,San Benito,White,2013,Percent,25.3
+6071,County,San Bernardino,White,2005,Percent,27.6
+6071,County,San Bernardino,White,2007,Percent,25.7
+6071,County,San Bernardino,White,2009,Percent,23.8
+6071,County,San Bernardino,White,2011,Percent,22.5
+6071,County,San Bernardino,White,2013,Percent,22.7
+6073,County,San Diego,White,2005,Percent,37.3
+6073,County,San Diego,White,2007,Percent,36.0
+6073,County,San Diego,White,2009,Percent,34.5
+6073,County,San Diego,White,2011,Percent,35.0
+6073,County,San Diego,White,2013,Percent,35.1
+6075,County,San Francisco,White,2005,Percent,25.5
+6075,County,San Francisco,White,2007,Percent,25.2
+6075,County,San Francisco,White,2009,Percent,26.1
+6075,County,San Francisco,White,2011,Percent,30.9
+6075,County,San Francisco,White,2013,Percent,32.9
+6077,County,San Joaquin,White,2005,Percent,29.4
+6077,County,San Joaquin,White,2007,Percent,27.1
+6077,County,San Joaquin,White,2009,Percent,24.9
+6077,County,San Joaquin,White,2011,Percent,23.7
+6077,County,San Joaquin,White,2013,Percent,23.7
+6079,County,San Luis Obispo,White,2005,Percent,61.1
+6079,County,San Luis Obispo,White,2007,Percent,59.9
+6079,County,San Luis Obispo,White,2009,Percent,57.1
+6079,County,San Luis Obispo,White,2011,Percent,57.5
+6079,County,San Luis Obispo,White,2013,Percent,57.6
+6081,County,San Mateo,White,2005,Percent,34.8
+6081,County,San Mateo,White,2007,Percent,34.1
+6081,County,San Mateo,White,2009,Percent,33.7
+6081,County,San Mateo,White,2011,Percent,33.4
+6081,County,San Mateo,White,2013,Percent,34.5
+6083,County,Santa Barbara,White,2005,Percent,35.4
+6083,County,Santa Barbara,White,2007,Percent,34.3
+6083,County,Santa Barbara,White,2009,Percent,30.7
+6083,County,Santa Barbara,White,2011,Percent,30.9
+6083,County,Santa Barbara,White,2013,Percent,30.7
+6085,County,Santa Clara,White,2005,Percent,29.3
+6085,County,Santa Clara,White,2007,Percent,27.7
+6085,County,Santa Clara,White,2009,Percent,25.4
+6085,County,Santa Clara,White,2011,Percent,24.7
+6085,County,Santa Clara,White,2013,Percent,25.0
+6087,County,Santa Cruz,White,2005,Percent,47.0
+6087,County,Santa Cruz,White,2007,Percent,45.5
+6087,County,Santa Cruz,White,2009,Percent,42.9
+6087,County,Santa Cruz,White,2011,Percent,42.5
+6087,County,Santa Cruz,White,2013,Percent,41.9
+6089,County,Shasta,White,2005,Percent,76.5
+6089,County,Shasta,White,2007,Percent,75.2
+6089,County,Shasta,White,2009,Percent,73.6
+6089,County,Shasta,White,2011,Percent,72.7
+6089,County,Shasta,White,2013,Percent,73.0
+6091,County,Sierra,White,2005,Percent,83.2
+6091,County,Sierra,White,2007,Percent,82.8
+6091,County,Sierra,White,2009,Percent,82.3
+6091,County,Sierra,White,2011,Percent,81.3
+6091,County,Sierra,White,2013,Percent,81.1
+6093,County,Siskiyou,White,2005,Percent,70.6
+6093,County,Siskiyou,White,2007,Percent,69.5
+6093,County,Siskiyou,White,2009,Percent,68.6
+6093,County,Siskiyou,White,2011,Percent,66.8
+6093,County,Siskiyou,White,2013,Percent,66.5
+6095,County,Solano,White,2005,Percent,34.6
+6095,County,Solano,White,2007,Percent,32.6
+6095,County,Solano,White,2009,Percent,30.4
+6095,County,Solano,White,2011,Percent,29.1
+6095,County,Solano,White,2013,Percent,29.7
+6097,County,Sonoma,White,2005,Percent,56.2
+6097,County,Sonoma,White,2007,Percent,53.7
+6097,County,Sonoma,White,2009,Percent,50.7
+6097,County,Sonoma,White,2011,Percent,48.7
+6097,County,Sonoma,White,2013,Percent,48.6
+6099,County,Stanislaus,White,2005,Percent,39.1
+6099,County,Stanislaus,White,2007,Percent,36.8
+6099,County,Stanislaus,White,2009,Percent,34.4
+6099,County,Stanislaus,White,2011,Percent,33.1
+6099,County,Stanislaus,White,2013,Percent,33.1
+6101,County,Sutter,White,2005,Percent,44.1
+6101,County,Sutter,White,2007,Percent,42.4
+6101,County,Sutter,White,2009,Percent,40.4
+6101,County,Sutter,White,2011,Percent,38.9
+6101,County,Sutter,White,2013,Percent,39.0
+6103,County,Tehama,White,2005,Percent,62.4
+6103,County,Tehama,White,2007,Percent,60.7
+6103,County,Tehama,White,2009,Percent,59.2
+6103,County,Tehama,White,2011,Percent,57.3
+6103,County,Tehama,White,2013,Percent,57.4
+6105,County,Trinity,White,2005,Percent,75.9
+6105,County,Trinity,White,2007,Percent,74.9
+6105,County,Trinity,White,2009,Percent,73.9
+6105,County,Trinity,White,2011,Percent,72.6
+6105,County,Trinity,White,2013,Percent,72.0
+6107,County,Tulare,White,2005,Percent,24.4
+6107,County,Tulare,White,2007,Percent,22.9
+6107,County,Tulare,White,2009,Percent,21.2
+6107,County,Tulare,White,2011,Percent,20.6
+6107,County,Tulare,White,2013,Percent,20.7
+6109,County,Tuolumne,White,2005,Percent,78.9
+6109,County,Tuolumne,White,2007,Percent,78.1
+6109,County,Tuolumne,White,2009,Percent,77.4
+6109,County,Tuolumne,White,2011,Percent,75.5
+6109,County,Tuolumne,White,2013,Percent,75.2
+6111,County,Ventura,White,2005,Percent,41.3
+6111,County,Ventura,White,2007,Percent,39.3
+6111,County,Ventura,White,2009,Percent,37.2
+6111,County,Ventura,White,2011,Percent,35.1
+6111,County,Ventura,White,2013,Percent,34.6
+6113,County,Yolo,White,2005,Percent,44.0
+6113,County,Yolo,White,2007,Percent,42.0
+6113,County,Yolo,White,2009,Percent,39.5
+6113,County,Yolo,White,2011,Percent,38.4
+6113,County,Yolo,White,2013,Percent,38.5
+6115,County,Yuba,White,2005,Percent,49.1
+6115,County,Yuba,White,2007,Percent,48.0
+6115,County,Yuba,White,2009,Percent,46.2
+6115,County,Yuba,White,2011,Percent,46.0
+6115,County,Yuba,White,2013,Percent,47.1

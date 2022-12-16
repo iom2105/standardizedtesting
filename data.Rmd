@@ -1,8 +1,497 @@
-# Data 
+# Data
+
+We have used multiple datasets for this project, and Each of them will be explained below.
 
 ## Sources
+### DataSet 1: 1000 anonymous students' SAT and GPA </b>
+This dataset was collected by Chance, a quantitative literacy course developed cooperatively by the Chance Team: J. Laurie Snell and Peter Doyle of Dartmouth College, Joan Garfield of the University of Minnesota, Tom Moore of Grinnell College, Bill Peterson of Middlebury College, and Ngambal Shah of Spelman College.<br />
+The raw data is directly accessible from the following link:<br /> <https://chance.dartmouth.edu/course/Syllabi/Princeton96/ETSValidation.html><br /> 
+The dataset collects 1000 anonymous students' gender, SAT scores, high-school GPA, and first-year college GPA.<br /> 
+<b>Format of the data     </b> A data frame with 1000 observations on the following 6 variables:<br/> 
+<ul>
+    <li> sex: Gender of the student.
+    <li> sat_v: Verbal SAT percentile.
+    <li> sat_m: Math SAT percentile.
+    <li> sat_sum: Total of verbal and math SAT percentiles.
+    <li> hs_gpa: High school grade point average.
+    <li> fy_gpa: First year (college) grade point average.
+</ul>
+<br /><b>Total number of records     </b> 1000 <br />
+<b>Problem with the data     </b> The data does not give direct SAT scores.Rather, it gives the percentile of SAT scores. Therefore, normalizations might be applied before using.
+
+### Dataset 2: Dartmouth Male and Female Students who take Psychology Courses' SAT and GPA
+These two datasets are collected by the same source as the prior dataset, Chance. Its attributes include SAT verbal, SAT math scores, SAT scores, total GPA, major GPA, and two Psych courses' GPA. The two datasets represent male students and female students respectively and are collected at the same time. They are accessible through the following links:<br /> <https://chance.dartmouth.edu/course/Syllabi/Princeton96/Dartmouth.men.html><br /> <https://chance.dartmouth.edu/course/Syllabi/Princeton96/Dartmouth.women.html><br />
+<b>Format of the data     </b> The following are the variables in these data sets:<br/> 
+<ul>
+    <li> SATV: Verval SAT scores
+    <li> SATM: Math SAT scores
+    <li> CGPA: Semester GPA 
+    <li> MGPA: Major GPA 
+    <li> Psych1: Psych1 course grade, where NA represents not taking the course.
+    <li> Psych10: Psych10 course grade, where NA represents not taking the course.
+    <li> SAT: Total SAT scores 
+</ul>
+<br /><b>Total number of records     </b> 611
+
+### Dataset 3: States SAT Scores in 2018
+This dataset is published by College Board, the 2018 SAT Suite of Assessments Annual Report, and it is accessible from the following link:<br />
+<https://reports.collegeboard.org/sat-suite-program-results><br />
+<b>Format of the data     </b> The Attributes include the following:<br/> 
+<ul>
+    <li> State: states of the United States
+    <li> Participation: Participation rate of students in each state for SAT exam Evidence-Based 
+    <li> Reading, Writing: State Average of SAT Verbal scores 
+    <li> Math: State Average of SAT Math scores 
+    <li> Total: State Average of total SAT scores 
+</ul>
+<br /><b>Total number of records     </b> 51
+<br /><b>Note:</b> This dataset counts the District of Columbia as a state.
+
+### Dataset 4: California SAT Reports from 1998 to 2016
+These datasets were originally collected by the California Department of Education (CDE). For decades, the CDE received California public school students’ SAT scores from the College Board, then groups the data by school, district, country, and state to produce California SAT Report. Scores for schools that had fewer than eleven students taking the SAT are not shown on the SAT Report to preserve the anonymity of the students. The report includes geographical information and a breakdown of average SAT scores. The data is accessible through the following link:<br />
+<https://data.world/education/california-sat-reports/workspace/intro><br />
+<b>Format of the data     </b> The dataset is a series of excel files that contain the following variable names—some of which have varying names across files representing the same type of data:<br/> 
+<ul>
+    <li> County Number: the Californian ID number for a specified county
+    <li> District Number: the Californian ID number for a specified district
+    <li> School Number: the Californian ID number for a specified high school
+    <li> cds: the Californian ID number for a specified county, district, or school
+    <li> rtype: the type of level the row specifies information for (i.e., county, district, or school)
+    <li> County Name (or cname)
+    <li> District Name (or dname)
+    <li> School Name (or sname): the name of high schools
+    <li> Grade 12 Enrollment (or Grade 12 or enroll12): the number of high school seniors in a specified school
+    <li> Number of Takers (or Number Tested or NumTstTakr): the number of high school seniors who took the SAT
+    <li> Percent of Takers (or Percent Tested): the percentage of high school seniors who took the SAT out of total high school seniors in the school
+    <li> Average Verbal Score (or V_Mean or AvgScrRead): the average score for the verbal/reading section of the SAT in a specified high school
+    <li> Average Math Score (or M_Mean or AvgScrMath): the average score for the mathematics section of the SAT in a specified high school
+    <li> Average Writing Score (or W_Mean or AvgScrWrit): the average score for the Writing section of the SAT  in a specified high school, for tests from 2005 onward
+    <li> Average Total Score (or Tot_Mean): the average total score for the SAT  in a specified high school
+    <li> Number w/Score >=1000: the number of high school seniors who took the SAT and scored at least averagely, for tests before 2005
+    <li> Number w/Score >=1500 (or GE1500Ct or NumGE1500): the number of high school seniors who took the SAT and scored at least averagely, for tests from 2005 onward
+    <li> Percent w/Score >=1000: the percentage of high school seniors who took the SAT and scored at least averagely, for tests before 2005, out of the total number of high school seniors who took the SAT
+    <li> Percent w/Score >=1500 (or Rate1500 or PctGE1500): the percentage of high school seniors who took the SAT and scored at least averagely, for tests from 2005 onward, out of the total number of high school seniors who took the SAT
+    <li> year: the academic year that the input correlates to
+</ul>
+<b>Problem with the data     </b> The variables of this dataset reflect the several changes and shifts in the standard formats of the CDE. To make all of the datasets consistent took a lot of calculations and cross-checking. Additionally, for some schools, the number of students taking the SAT was so minute that the data was not recorded in the set. As a result, there are quite a few missing values, as we'll discover later on in this section. Lastly, the SAT added the writing section to the exam in 2005, thus changing the maximum score from 1600 to 2400 and the average threshold from 1000 to 1500. This must be taken into account when creating scales for the cleaned data and visualizations.<br/>
+
+<br/><b>Choosing what years and variables to work with     </b> Altogether, there were 18 data sets from 1998 to 2016—each of them encompassing the SAT scores of high school students in California graduating in an academic year (e.g., 1999-2000, 2005-2006). Because of the large number of data sets, we have chosen to focuse half of those datasets, all of which have a starting year that is 2 years prior to the next used data set. In terms of variables, we have chosen to look at the data on the level of County, since it allowed for more opportunities in using other data sets in addition to this one for analysis. Since our object of focus is mainly the SAT scores, we chose to mainly focus on the number of test takers, the average scores for all sections, the average total score, and the percentage of test takers who scored at least an average score (i.e., 1000 for test before 2005 and 1500 for test from 2005 onward).
+ 
+
+### Dataset 5: KidsData.org's  Child Population, by County by Race/Ethnicity
+The first dataset is Child Population, by County by Race/Ethnicity. The table reports the percentage of children who identify with a list of races in each county from 1995 to 2021. The total options for race breakdown are the following: African American/Black, American Indian/Alaska Native, Asian, Hispanic/Latino, Native Hawaiian/Pacific Islander, White, and Multiracial. The dataset also provides the option to review this data in the format of count as opposed to percentage. The full data is accessible through the following link:<br />
+<https://www.kidsdata.org/topic/33/child-population-race/table#fmt=144&loc=2,127,347,1763,331,348,336,171,321,345,357,332,324,369,358,362,360,337,327,364,356,217,353,328,354,323,352,320,339,334,365,343,330,367,344,355,366,368,265,349,361,4,273,59,370,326,333,322,341,338,350,342,329,325,359,351,363,340,335&tf=141&ch=7,11,70,10,72,9,73><br/>
+
+<br/><b>Choosing what years and variables to work with     </b> For this dataset, we found it best to test bias by determining if the percentage of white children in a county had any correlation with the SAT statistics, considering that being white is considered the societal and academic "norm". Thus, we downloaded the data such that it represented the percentage of white children within each county of California. We also made sure that it covered data for 2005 to 2013, since it would remain consistent with our other Californian demographoc datasets later on.<br/>
+
+<br/><b>Format of the data     </b> The dataset is a CSV file with 291 lines and the following variables:
+<ul>
+    <li> FIPSCode: the Californian ID number for a specified county
+    <li> LocationType: the geographic level at which the data is presented (i.e., county)
+    <li> Location: county name
+    <li> Race_Ethnicity: the race/ethnicity for which the statistic represents (i.e., white)
+    <li> TimeFrame: year
+    <li> DateFormat: the type of statistic (i.e., percent or number/count)
+    <li> Data: the statistic value
+</ul>
+
+
+### Dataset 6: KidsData.org's Child Population, by County by Age Group and Gender.
+The second dataset is Child Population, by County by Age Group and Gender. Similarly to the previous dataset, it reports the percentage (or count) of children who identify with a list of age groups and genders in each county from 1995 to 2021. The following are all the options for age groups: Ages 0-2, Ages 3-5, Ages 6-10, Ages 11-13, Ages 14-17, and Total for Ages 0-17. The options for gender are Female and Male. The data is accessible through the following link:<br />
+<https://www.kidsdata.org/topic/34/child-population-age-gender/table#fmt=141&loc=2,127,347,1763,331,348,336,171,321,345,357,332,324,369,358,362,360,337,327,364,356,217,353,328,354,323,352,320,339,334,365,343,330,367,344,355,366,368,265,349,361,4,273,59,370,326,333,322,341,338,350,342,329,325,359,351,363,340,335&tf=141&ch=1433,926,927,1434,1435,372,78,77,79>
+
+<br/><b>Choosing what years and variables to work with     </b> For this dataset, we found it best to test bias by determining if the percentage of male children in a county had any correlation with the SAT statistics, considering that being male is considered the societal and academic "norm". Thus, we downloaded the data such that it represented the total count of male children within each county of California. We also made sure that it covered data for 2005 to 2013, since it would remain consistent with our other Californian demographoc datasets later on.<br/>
+
+<br/><b>Format of the data     </b> The dataset is a CSV file with 291 lines and the following variables:
+<ul>
+    <li> FIPSCode: the Californian ID number for a specified county
+    <li> LocationType: the geographic level at which the data is presented (i.e., county)
+    <li> Location: county name
+    <li> AgeGroup: the specified age group for which the inputs in this row represent (i.e., all ages)
+    <li> Gender: the "gender" for which the statistic represent (i.e., Male)
+    <li> TimeFrame: year
+    <li> DateFormat: the type of statistic (i.e., number/count)
+    <li> Data: the statistic value
+</ul>
+
+### Dataset 7: KidsData.org's
+The final dataset is Children in Poverty, by Race/Ethnicity (Regions of 10,000 Residents or More). The table reports the percentage of children who live in poverty in each county from 2005 to 2018. The options for race and ethnicity are consistent with the first dataset. The data is accessible through the following link:<br />
+<https://www.kidsdata.org/topic/544/poverty-race-10k/table#fmt=727&loc=2,127,1763,331,348,336,171,321,345,357,332,324,369,358,362,360,337,327,364,356,217,353,328,354,352,320,339,334,365,343,330,367,344,355,366,368,265,349,361,4,273,59,370,326,322,341,338,350,342,329,325,359,351,363,340,335&tf=132&ch=7,11,726,10,72,9,73,1298>
+
+<br/><b>Format of the data     </b> The dataset is a CSV file with 291 lines and the following variables:
+<ul>
+    <li> FIPSCode: the Californian ID number for a specified county
+    <li> LocationType: the geographic level at which the data is presented (i.e., county)
+    <li> Location: county name
+    <li> Race_Ethnicity: the race/ethnicity for which the statistic represents (i.e., All Children)
+    <li> TimeFrame: year
+    <li> DateFormat: the type of statistic (i.e., number/count)
+    <li> Data: the statistic value
+</ul>
+
+<b>Problem with the data     </b> There are missing values for certain years and not others, which affects consistency with results. Unfortunately, we were not able to find other sources that could fill in this missing data and there is no way to infer what the values may have been.<br/>
 
 ## Cleaning / transformation
+### Datasets 1, 2, and 3
+The variable sat_sum is the sum of sat_v and sat_m, but since both sat_v and sat_m are percentiles, such summations may be problematic because percentiles differs from percentiles of sum. In this case, we actually want percentiles of sum; thus, we will simply divide this column by 2 to represent percentiles of sum, because verbal and math takes the same proportion in SAT scores. Sex is represented using 1 and 0, where 1 represents male and 0 for female. We need to change it to actual gender.
+
+```{r}
+data1 <- read.csv("satgpa.csv")
+data1$sat_total = data1$sat_sum/2
+
+for(i in 1:nrow(data1)){
+    if(data1$sex[i]=="1"){
+        data1$sex[i]="Male"
+    }
+    else{
+      data1$sex[i]="Female"
+    }
+}
+```
+
+The data stores males and females' scores separately. We have to download it, save it to csv, and combine them together and add gender attribute to it.
+
+```{r}
+data2 <- read.csv("combined_data2.csv")
+```
+
+To apply mapping in R, we need to change state names to lower letter, and we need to change percentage char to numeric.
+
+```{r}
+map_data = read.csv("SAT_State.csv")
+names(map_data) <- tolower(names(map_data))
+map_data$state = tolower(map_data$state)
+map_data$participation = as.numeric(sub("%", "", map_data$participation))
+```
+
+### Dataset 4
+```{r}
+library(readxl)
+library(dplyr)
+library(stats)
+library(stringr)
+```
+
+
+```{r}
+SAT1999 = read_excel("SAT Report 1999-2000.xls", col_names = FALSE, na = c('0', '- -', '--'))
+SAT2001 = read_excel("SAT Report 2001-2002.xls", col_names = FALSE, na = c('0', '- -', '--'))
+SAT2003 = read_excel("SAT Report 2003-2004.xls", col_names = FALSE, na = c('0', '- -', '--'))
+SAT2005 = read_excel("SAT Report 2005-2006.xls", col_names = FALSE, na = c('0', '- -', '--'))
+SAT2007 = read_excel("SAT Report 2007-2008.xls", col_names = FALSE, na = c('0', '- -', '--', 'E'))
+SAT2009 = read_excel("SAT Report 2009-2010.xls", col_names = FALSE, na = c('0', '- -', '--'))
+SAT2011 = read_excel("SAT Report 2011-2012.xls", col_names = FALSE, na = c('0', '- -', '--'))
+SAT2013 = read_excel("SAT Report 2013-2014.xls", col_names = TRUE, na = c('0', '0.00', 'NA', '*','', '- -', '--'))
+SAT2015 = read_excel("SAT Report 2015-2016.xls", sheet = "SAT_2016", col_names = TRUE, na = c('0', '0.00', 'NA', '*','', '- -', '--'))
+```
+
+We started by loading the data of all the excel files. Note, in those lines, we specified the inputs that represented missing values (e.g., *, NA, - -, 0). For all of the datasets except SAT2013 and SAT 2015, we did not specify that the first row contains the column names because the originally downloaded datasets contain rows above the headers that are not column rows. To ensure a reproducible workflow, we decided to fix these problems in R as opposed to removing the excess rows manually. In the following cell, we will add those column names.
+
+```{r}
+colnames(SAT1999) <- SAT1999[3,]
+SAT1999 <- SAT1999[4:nrow(SAT1999), ]
+
+colnames(SAT2001) <- SAT2001[3,]
+SAT2001 <- SAT2001[4:nrow(SAT2001), ]
+
+colnames(SAT2003) <- SAT2003[3,]
+SAT2003 <- SAT2003[4:nrow(SAT2003), ]
+
+colnames(SAT2005) <- SAT2005[3,]
+SAT2005 <- SAT2005[4:nrow(SAT2005), ]
+
+colnames(SAT2007) <- SAT2007[3,]
+SAT2007 <- SAT2007[4:nrow(SAT2007), ]
+
+colnames(SAT2009) <- SAT2009[5,]
+SAT2009 <- SAT2009[6:nrow(SAT2009), ]
+
+colnames(SAT2011) <- SAT2011[4,]
+SAT2011 <- SAT2011[5:nrow(SAT2011), ]
+```
+
+By now, we've noticed that the structure for the data sets from 1999 to 2011 are different from 2013 and 2015, despite the fact that they were all downloaded from the same source. For the consistency, and ease, of our analyses, we will transform these data sets to showcase the the averages of the following variables per county:
+<ul>
+    <li> number of test takers
+    <li> average verbal score (or average critical reading score, for tests from 2005 onward)
+    <li> average mathematics score
+    <li> average writing score, for tests from 2005 onward; otherwise, it's 0 for all of test years
+    <li> total average
+    <li> percentage of test takers who scored equal to or greater than the widely value for an averagely competitive score (1000 for before 2005 and 1500 after)
+</ul>
+<br/> Because there are the missing SAT statistics are of no use to this analysis, and there is no way to infer or fill in what those missing values are, we will remove them. Additionally, to allow for a smoother process for calling variables, we will be removing and replacing whitespaces and other symbols in variable names.
+
+```{r}
+#### 1999
+SAT1999_noNA <- SAT1999[complete.cases(SAT1999), ]
+#Note: we repeat this process because gsub will only take one argument for pattern, not a character vector
+colnames(SAT1999_noNA) <- gsub(" ", "_", colnames(SAT1999_noNA))
+colnames(SAT1999_noNA) <- gsub("[\r\n]", "_", colnames(SAT1999_noNA))
+colnames(SAT1999_noNA) <- gsub("/", "", colnames(SAT1999_noNA))
+colnames(SAT1999_noNA) <- gsub(">=", "ge_", colnames(SAT1999_noNA))
+
+SAT1999_means <- SAT1999_noNA |>
+  group_by(County_Name) |>
+  summarize(avg_per_takers = mean(as.numeric(Percent_of_Takers)),
+            avg_verbal = mean(as.numeric(Average_Verbal_Score)), 
+            avg_math = mean(as.numeric(Average_Math_Score)),
+            avg_writing = 0,
+            avg_total = mean(as.numeric(Average_Total_Score)), 
+            avg_per_thresh = mean(as.numeric(Percent_wScore_ge_1000)),
+            year = 1999) |>
+  ungroup()
+
+#### 2001
+SAT2001_noNA <- SAT2001[complete.cases(SAT2001), ]
+colnames(SAT2001_noNA) <- gsub(" ", "_", colnames(SAT2001_noNA))
+colnames(SAT2001_noNA) <- gsub("[\r\n]", "_", colnames(SAT2001_noNA))
+colnames(SAT2001_noNA) <- gsub("/", "", colnames(SAT2001_noNA))
+colnames(SAT2001_noNA) <- gsub(">=", "ge_", colnames(SAT2001_noNA))
+
+SAT2001_means <- SAT2001_noNA |>
+  group_by(County_Name) |>
+  summarize(avg_per_takers = mean(as.numeric(Percent_of_Takers)),
+            avg_verbal = mean(as.numeric(Average_Verbal_Score)), 
+            avg_math = mean(as.numeric(Average_Math_Score)),
+            avg_writing = 0,
+            avg_total = mean(as.numeric(Average_Total_Score)), 
+            avg_per_thresh = mean(as.numeric(Percent_wScore_ge_1000)),
+            year = 2001) |>
+  ungroup()
+
+#### 2003
+SAT2003_noNA <- SAT2003[complete.cases(SAT2003), ]
+colnames(SAT2003_noNA) <- gsub(" ", "_", colnames(SAT2003_noNA))
+colnames(SAT2003_noNA) <- gsub("[\r\n]", "_", colnames(SAT2003_noNA))
+colnames(SAT2003_noNA) <- gsub("/", "", colnames(SAT2003_noNA))
+colnames(SAT2003_noNA) <- gsub(">=", "ge_", colnames(SAT2003_noNA))
+
+SAT2003_means <- SAT2003_noNA |>
+  group_by(County_Name) |>
+  summarize(avg_per_takers = mean(as.numeric(Percent_of_Takers)),
+            avg_verbal = mean(as.numeric(Average_Verbal_Score)), 
+            avg_math = mean(as.numeric(Average_Math_Score)),
+            avg_writing = 0,
+            avg_total = mean(as.numeric(Average_Total_Score)), 
+            avg_per_thresh = mean(as.numeric(Percent_wScore_ge_1000)),
+            year = 2003) |>
+  ungroup()
+
+#### 2005
+SAT2005_noNA <- SAT2005[complete.cases(SAT2005), ]
+colnames(SAT2005_noNA) <- gsub(" ", "_", colnames(SAT2005_noNA))
+colnames(SAT2005_noNA) <- gsub("[\r\n]", "_", colnames(SAT2005_noNA))
+colnames(SAT2005_noNA) <- gsub("/", "", colnames(SAT2005_noNA))
+colnames(SAT2005_noNA) <- gsub(">=", "ge_", colnames(SAT2005_noNA))
+
+SAT2005_means <- SAT2005_noNA |>
+  group_by(County_Name) |>
+  summarize(avg_per_takers = mean(as.numeric(Percent_of_Takers)),
+            avg_verbal = mean(as.numeric(Average_Verbal_Score)), 
+            avg_math = mean(as.numeric(Average_Math_Score)),
+            avg_writing = mean(as.numeric(Average_Writing_Score)),
+            avg_total = mean(as.numeric(Average_Total_Score)),
+            avg_per_thresh = mean(as.numeric(Rate_wScore_ge_1500)),
+            year = 2005) |>
+  ungroup()
+
+#### 2007
+SAT2007_noNA <- SAT2007[complete.cases(SAT2007), ]
+colnames(SAT2007_noNA) <- gsub(" ", "_", colnames(SAT2007_noNA))
+colnames(SAT2007_noNA) <- gsub("[\r\n]", "", colnames(SAT2007_noNA))
+colnames(SAT2007_noNA) <- gsub("/", "", colnames(SAT2007_noNA))
+colnames(SAT2007_noNA) <- gsub(">=", "ge_", colnames(SAT2007_noNA))
+
+SAT2007_means <- SAT2007_noNA |>
+  group_by(County_Name) |>
+  summarize(avg_per_takers = mean(as.numeric(PercentTested)),
+            avg_verbal = mean(as.numeric(Critical_ReadingAverage)), 
+            avg_math = mean(as.numeric(MathAverage)),
+            avg_writing = mean(as.numeric(WritingAverage)),
+            avg_total = mean(as.numeric(TotalAverage)), 
+            avg_per_thresh = mean(as.numeric(Totalge_1500_Percent)),
+            year = 2007) |>
+  ungroup()
+
+#### 2009
+SAT2009_noNA <- SAT2009[complete.cases(SAT2009), ]
+colnames(SAT2009_noNA) <- gsub(" ", "_", colnames(SAT2009_noNA))
+colnames(SAT2009_noNA) <- gsub("[\r\n]", "", colnames(SAT2009_noNA))
+colnames(SAT2009_noNA) <- gsub("/", "", colnames(SAT2009_noNA))
+colnames(SAT2009_noNA) <- gsub(">=", "ge_", colnames(SAT2009_noNA))
+
+SAT2009_means <- SAT2009_noNA |>
+  group_by(County_Name) |>
+  summarize(avg_per_takers = mean(as.numeric(PercentTested)),
+            avg_verbal = mean(as.numeric(Critical_ReadingAverage)), 
+            avg_math = mean(as.numeric(MathAverage)),
+            avg_writing = mean(as.numeric(WritingAverage)),
+            avg_total = mean(as.numeric(TotalAverage)), 
+            avg_per_thresh = mean(as.numeric(Totalge_1500_Percent)),
+            year = 2009) |>
+  ungroup()
+
+#### 2011
+SAT2011_noNA <- SAT2011[complete.cases(SAT2011), ]
+colnames(SAT2011_noNA) <- gsub(" ", "_", colnames(SAT2011_noNA))
+colnames(SAT2011_noNA) <- gsub("[\r\n]", "_", colnames(SAT2011_noNA))
+
+SAT2011_means <- SAT2011_noNA |>
+  group_by(County_Name) |>
+  summarize(avg_per_takers = mean(as.numeric(Percent_Tested)),
+            avg_verbal = mean(as.numeric(V_Mean)), 
+            avg_math = mean(as.numeric(M_Mean)),
+            avg_writing = mean(as.numeric(W_Mean)),
+            avg_total = mean(as.numeric(Tot_Mean)), 
+            avg_per_thresh = mean(as.numeric(Rate1500)),
+            year = 2011) |>
+  ungroup()
+
+#### 2013
+SAT2013_noNA <- SAT2013[complete.cases(SAT2013), ]
+#calculating variables for percentage of seniors tested, the average total SAT score, and changing the title of the county name column to the original 2013 SAT dataset
+SAT2013_noNA <- mutate(SAT2013_noNA, Percent_Tested = ((as.numeric(NumTstTakr)/as.numeric(enroll12))*100), Tot_Mean = (as.numeric(AvgScrRead) + as.numeric(AvgScrMath) + as.numeric(AvgScrWrite)), County_Name = cname)
+
+SAT2013_means <- SAT2013_noNA |>
+  group_by(County_Name) |>
+  summarize(avg_per_takers = mean(Percent_Tested),
+            avg_verbal = mean(as.numeric(AvgScrRead)), 
+            avg_math = mean(as.numeric(AvgScrMath)),
+            avg_writing = mean(as.numeric(AvgScrWrite)),
+            avg_total = mean(Tot_Mean), 
+            avg_per_thresh = mean(as.numeric(PctGE1500)),
+            year = 2013) |>
+  ungroup()
+
+#### 2015
+SAT2015_noNA <- SAT2015[complete.cases(SAT2015), ]
+#calculating variables for percentage of seniors tested, the average total SAT score, and changing the title of the county name column to the original 2015 SAT dataset
+SAT2015_noNA <- mutate(SAT2015_noNA, Percent_Tested = ((as.numeric(NumTstTakr)/as.numeric(enroll12))*100), Tot_Mean = (as.numeric(AvgScrRead) + as.numeric(AvgScrMath) + as.numeric(AvgScrWrit)), County_Name = cname)
+
+SAT2015_means <- SAT2015_noNA |>
+  group_by(County_Name) |>
+  summarize(avg_per_takers = mean(Percent_Tested),
+            avg_verbal = mean(as.numeric(AvgScrRead)), 
+            avg_math = mean(as.numeric(AvgScrMath)),
+            avg_writing = mean(as.numeric(AvgScrWrit)),
+            avg_total = mean(Tot_Mean), 
+            avg_per_thresh = mean(as.numeric(PctGE1500)),
+            year = 2015) |>
+  ungroup()
+```
+It is important to note that for 2015, there's only 56 counties because all three of Sierra's inputs did not have any scores (i.e., they were all NAs).<br/>
+
+Now, we will create a cohesive dataframe of the average SAT statistics for each year that will be used for visualizations in the next section. 
+
+```{r}
+SAT_before_2005 <- do.call("rbind", list(SAT1999_means, SAT2001_means, SAT2003_means)) |> mutate(max_score = 1600, County_Name = str_to_title(County_Name))
+SAT_after_2005 <-  do.call("rbind", list(SAT2005_means, SAT2007_means, SAT2009_means, SAT2011_means, SAT2013_means, SAT2015_means)) |> mutate(max_score = 2400)
+
+SAT_all <- rbind(SAT_before_2005, SAT_after_2005)
+
+SAT_all_means_years <- SAT_all |>
+  group_by(year) |>
+  summarize(avg_per_takers = mean(avg_per_takers),
+            avg_verbal = mean(avg_verbal), 
+            avg_math = mean(avg_math),
+            avg_writing = mean(avg_writing),
+            avg_total = mean(avg_total), 
+            max_score = mean(max_score),
+            avg_per_thresh = mean(avg_per_thresh)) |>
+  ungroup()
+
+SAT_all_means_years <- mutate(SAT_all_means_years, avg_total_per = (avg_total / max_score)*100)
+SAT_all_means_years
+```
+
+
+### Dataset 5
+Note, for all the KidsData.org datasets, the following years were chosen as years of interests based on 1) results from the analyses of Dataset 4 and 2) their high frequency of availability in demographic datasets: 2005, 2009, 2013.<br/>
+To clean this dataset, the CSV files will simply be read.
+```{r}
+white_kid_data <- read.csv("Kidsdata-child-population-race-Child-Population.csv", header = TRUE, sep = ",", na.strings = c("S"))
+avail_counties <- intersect(as.vector(SAT_all$County_Name), as.vector(white_kid_data$Location))
+white_kid_data_avail <- white_kid_data |> filter(is.element(Location, avail_counties) == TRUE)
+```
+
+### Datasets 6
+To clean this dataset, the CSV files for each year will simply be read.
+```{r}
+#### 2005
+gender_data_2005 <- read.csv("Kidsdata-child-population-age-gender-Child-Population--by-A_2005.csv", header = TRUE, sep = ",", na.strings = c("S"))
+
+#### 2009
+gender_data_2009 <- read.csv("Kidsdata-child-population-age-gender-Child-Population--by-A_2009.csv", header = TRUE, sep = ",", na.strings = c("S"))
+
+#### 2013
+gender_data_2013 <- read.csv("Kidsdata-child-population-age-gender-Child-Population--by-A_2013.csv", header = TRUE, sep = ",", na.strings = c("S"))
+```
+
+### Datasets 7
+Unlike the previous two datasets, this dataset has missing values that must accounted for and properly dealt with. This involves reading the CSV file and specifying the NA characters. Then, the data has to be split to three different data frames, each containing all of the data for our years of interest. Then, we will remove rows with NAs and identify the intersection of counties from the dataframe with no NAs and the data frame from Dataset 4 representing the average SAT statistics by year. Finally, the poverty statistics for those intersecting counties will be subset and ordered alphabetically. This ensures that when analyses begin, there is consistency between the data for counties.
+
+```{r}
+#### Read the CSV file
+poverty_data <- read.csv("Kidsdata-poverty-race-10k-Children-in-Poverty--by-Race-Ethn.csv", header = TRUE, sep = ",", na.strings = c("S"))
+
+#### 2005
+poverty_data_2005 <- poverty_data[complete.cases(poverty_data), ] |> filter(TimeFrame == "2005")
+avail_poverty_2005_counties <- intersect(as.vector(SAT_all$County_Name), as.vector(poverty_data_2005$Location))
+
+poverty_data_2005_avail <- poverty_data_2005 |> filter(is.element(Location, avail_poverty_2005_counties) == TRUE)
+SAT2005_poverty_counties <- SAT2005_means |> filter(is.element(County_Name, avail_poverty_2005_counties) == TRUE)
+
+poverty_2005 <- poverty_data_2005_avail[order(poverty_data_2005_avail$Location), ]
+
+#### 2009
+poverty_data_2009 <- poverty_data[complete.cases(poverty_data), ] |> filter(TimeFrame == "2009")
+avail_poverty_2009_counties <- intersect(as.vector(SAT_all$County_Name), as.vector(poverty_data_2009$Location))
+
+poverty_2009_avail <- poverty_data_2009 |> filter(is.element(Location, avail_poverty_2009_counties) == TRUE)
+SAT2009_poverty_counties <- SAT2009_means |> filter(is.element(County_Name, avail_poverty_2009_counties) == TRUE)
+
+poverty_2009 <- poverty_2009_avail[order(poverty_2009_avail$Location), ]
+
+#### 2013
+poverty_data_2013 <- poverty_data[complete.cases(poverty_data), ] |> filter(TimeFrame == "2013")
+avail_poverty_2013_counties <- intersect(as.vector(SAT_all$County_Name), as.vector(poverty_data_2013$Location))
+
+poverty_2013_avail <- poverty_data_2013 |> filter(is.element(Location, avail_poverty_2013_counties) == TRUE)
+SAT2013_poverty_counties <- SAT2013_means |> filter(is.element(County_Name, avail_poverty_2013_counties) == TRUE)
+
+poverty_2013 <- poverty_2013_avail[order(poverty_2013_avail$Location), ]
+```
 
 ## Missing value analysis
+###Datasets 1, 2, and 3
 
+The dataset does not have missing values. The number of missing values for each column:
+
+```{r}
+sapply(data1, function(x) sum(is.na(x)))
+```
+
+Values "NA" represent missing values, and they are filled with mean of the columns. The number of missing values for each column:
+
+```{r}
+library(dplyr)
+colSums(is.na(data2)) %>%
+  sort(decreasing = TRUE)
+```
+
+Fill "NA" with mean values
+
+```{r}
+library(imputeTS)
+na_mean(data2)
+```
+
+The state dataset does not have any missing data. The number of missing values for each column:
+
+```{r}
+sapply(map_data, function(x) sum(is.na(x)))
+```
+
+### Dataset 4
+
+### Dataset 5

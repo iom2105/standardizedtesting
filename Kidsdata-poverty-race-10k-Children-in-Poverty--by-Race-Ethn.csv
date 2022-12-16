@@ -1,0 +1,276 @@
+FIPSCode,LocationType,Location,Race_Ethnicity,TimeFrame,DataFormat,Data
+6081,County,San Mateo,All Children,2005,Percent,9.6
+6081,County,San Mateo,All Children,2007,Percent,8.8
+6081,County,San Mateo,All Children,2009,Percent,9.5
+6081,County,San Mateo,All Children,2011,Percent,10.2
+6081,County,San Mateo,All Children,2013,Percent,8.7
+6085,County,Santa Clara,All Children,2005,Percent,10.5
+6085,County,Santa Clara,All Children,2007,Percent,11.5
+6085,County,Santa Clara,All Children,2009,Percent,12.3
+6085,County,Santa Clara,All Children,2011,Percent,10.9
+6085,County,Santa Clara,All Children,2013,Percent,9.7
+6001,County,Alameda,All Children,2005,Percent,13.7
+6001,County,Alameda,All Children,2007,Percent,14.9
+6001,County,Alameda,All Children,2009,Percent,15.7
+6001,County,Alameda,All Children,2011,Percent,15.2
+6001,County,Alameda,All Children,2013,Percent,13.0
+6013,County,Contra Costa,All Children,2005,Percent,11.2
+6013,County,Contra Costa,All Children,2007,Percent,12.9
+6013,County,Contra Costa,All Children,2009,Percent,13.8
+6013,County,Contra Costa,All Children,2011,Percent,14.0
+6013,County,Contra Costa,All Children,2013,Percent,12.4
+6041,County,Marin,All Children,2005,Percent,6.8
+6041,County,Marin,All Children,2007,Percent,8.1
+6041,County,Marin,All Children,2009,Percent,8.9
+6041,County,Marin,All Children,2011,Percent,10.3
+6041,County,Marin,All Children,2013,Percent,9.7
+6075,County,San Francisco,All Children,2005,Percent,12.2
+6015,County,Del Norte,All Children,2005,Percent,S
+6015,County,Del Norte,All Children,2007,Percent,S
+6015,County,Del Norte,All Children,2009,Percent,S
+6015,County,Del Norte,All Children,2011,Percent,S
+6015,County,Del Norte,All Children,2013,Percent,S
+6023,County,Humboldt,All Children,2005,Percent,19.8
+6023,County,Humboldt,All Children,2007,Percent,21.4
+6023,County,Humboldt,All Children,2009,Percent,23.5
+6023,County,Humboldt,All Children,2011,Percent,23.7
+6023,County,Humboldt,All Children,2013,Percent,22.5
+6053,County,Monterey,All Children,2005,Percent,18.6
+6053,County,Monterey,All Children,2007,Percent,21.8
+6053,County,Monterey,All Children,2009,Percent,24.9
+6053,County,Monterey,All Children,2011,Percent,25.1
+6053,County,Monterey,All Children,2013,Percent,21.6
+6075,County,San Francisco,All Children,2007,Percent,12.7
+6075,County,San Francisco,All Children,2009,Percent,13.4
+6075,County,San Francisco,All Children,2011,Percent,12.7
+6075,County,San Francisco,All Children,2013,Percent,11.4
+6083,County,Santa Barbara,All Children,2005,Percent,16.2
+6083,County,Santa Barbara,All Children,2007,Percent,17.3
+6083,County,Santa Barbara,All Children,2009,Percent,20.5
+6083,County,Santa Barbara,All Children,2011,Percent,21.2
+6083,County,Santa Barbara,All Children,2013,Percent,19.4
+6093,County,Siskiyou,All Children,2005,Percent,20.2
+6093,County,Siskiyou,All Children,2007,Percent,24.8
+6093,County,Siskiyou,All Children,2009,Percent,27.7
+6093,County,Siskiyou,All Children,2011,Percent,30.5
+6093,County,Siskiyou,All Children,2013,Percent,26.6
+6105,County,Trinity,All Children,2005,Percent,S
+6105,County,Trinity,All Children,2007,Percent,S
+6105,County,Trinity,All Children,2009,Percent,S
+6007,County,Butte,All Children,2005,Percent,21.3
+6007,County,Butte,All Children,2007,Percent,24.7
+6007,County,Butte,All Children,2009,Percent,23.0
+6007,County,Butte,All Children,2011,Percent,23.9
+6007,County,Butte,All Children,2013,Percent,21.5
+6011,County,Colusa,All Children,2005,Percent,S
+6011,County,Colusa,All Children,2007,Percent,22.0
+6011,County,Colusa,All Children,2009,Percent,18.8
+6011,County,Colusa,All Children,2011,Percent,22.2
+6011,County,Colusa,All Children,2013,Percent,20.7
+6021,County,Glenn,All Children,2005,Percent,S
+6021,County,Glenn,All Children,2007,Percent,23.9
+6021,County,Glenn,All Children,2009,Percent,S
+6021,County,Glenn,All Children,2011,Percent,S
+6021,County,Glenn,All Children,2013,Percent,S
+6033,County,Lake,All Children,2005,Percent,29.2
+6033,County,Lake,All Children,2007,Percent,32.2
+6033,County,Lake,All Children,2009,Percent,36.4
+6033,County,Lake,All Children,2011,Percent,32.8
+6033,County,Lake,All Children,2013,Percent,31.6
+6035,County,Lassen,All Children,2005,Percent,S
+6035,County,Lassen,All Children,2007,Percent,S
+6035,County,Lassen,All Children,2009,Percent,S
+6035,County,Lassen,All Children,2011,Percent,S
+6035,County,Lassen,All Children,2013,Percent,20.7
+6045,County,Mendocino,All Children,2005,Percent,22.6
+6045,County,Mendocino,All Children,2007,Percent,25.1
+6045,County,Mendocino,All Children,2009,Percent,28.3
+6045,County,Mendocino,All Children,2011,Percent,28.1
+6045,County,Mendocino,All Children,2013,Percent,24.4
+6055,County,Napa,All Children,2005,Percent,11.3
+6055,County,Napa,All Children,2007,Percent,12.9
+6057,County,Nevada,All Children,2005,Percent,9.1
+6057,County,Nevada,All Children,2007,Percent,13.7
+6057,County,Nevada,All Children,2009,Percent,16.0
+6057,County,Nevada,All Children,2011,Percent,17.1
+6057,County,Nevada,All Children,2013,Percent,15.1
+6063,County,Plumas,All Children,2005,Percent,S
+6063,County,Plumas,All Children,2007,Percent,S
+6063,County,Plumas,All Children,2009,Percent,S
+6063,County,Plumas,All Children,2011,Percent,S
+6063,County,Plumas,All Children,2013,Percent,12.8
+6089,County,Shasta,All Children,2005,Percent,21.7
+6089,County,Shasta,All Children,2007,Percent,23.4
+6089,County,Shasta,All Children,2009,Percent,23.3
+6089,County,Shasta,All Children,2011,Percent,23.5
+6089,County,Shasta,All Children,2013,Percent,25.4
+6097,County,Sonoma,All Children,2005,Percent,12.2
+6097,County,Sonoma,All Children,2007,Percent,13.5
+6097,County,Sonoma,All Children,2009,Percent,15.2
+6097,County,Sonoma,All Children,2011,Percent,14.6
+6097,County,Sonoma,All Children,2013,Percent,13.1
+6103,County,Tehama,All Children,2005,Percent,29.0
+6103,County,Tehama,All Children,2007,Percent,30.6
+6103,County,Tehama,All Children,2009,Percent,28.7
+6103,County,Tehama,All Children,2011,Percent,27.6
+6103,County,Tehama,All Children,2013,Percent,30.9
+6105,County,Trinity,All Children,2011,Percent,S
+6105,County,Trinity,All Children,2013,Percent,S
+6115,County,Yuba,All Children,2005,Percent,23.8
+6115,County,Yuba,All Children,2007,Percent,28.9
+6115,County,Yuba,All Children,2009,Percent,29.5
+6115,County,Yuba,All Children,2011,Percent,30.2
+6115,County,Yuba,All Children,2013,Percent,25.0
+6009,County,Calaveras,All Children,2005,Percent,13.8
+6009,County,Calaveras,All Children,2007,Percent,7.2
+6009,County,Calaveras,All Children,2009,Percent,9.7
+6009,County,Calaveras,All Children,2011,Percent,13.3
+6009,County,Calaveras,All Children,2013,Percent,S
+6017,County,El Dorado,All Children,2005,Percent,9.9
+6017,County,El Dorado,All Children,2007,Percent,10.8
+6017,County,El Dorado,All Children,2009,Percent,10.8
+6017,County,El Dorado,All Children,2011,Percent,13.3
+6017,County,El Dorado,All Children,2013,Percent,11.6
+6019,County,Fresno,All Children,2005,Percent,29.8
+6019,County,Fresno,All Children,2007,Percent,33.3
+6019,County,Fresno,All Children,2009,Percent,37.1
+6019,County,Fresno,All Children,2011,Percent,38.2
+6019,County,Fresno,All Children,2013,Percent,36.5
+6027,County,Inyo,All Children,2005,Percent,14.6
+6027,County,Inyo,All Children,2007,Percent,17.7
+6027,County,Inyo,All Children,2009,Percent,18.2
+6027,County,Inyo,All Children,2011,Percent,14.1
+6027,County,Inyo,All Children,2013,Percent,13.3
+6029,County,Kern,All Children,2005,Percent,28.0
+6029,County,Kern,All Children,2007,Percent,29.8
+6029,County,Kern,All Children,2009,Percent,32.3
+6029,County,Kern,All Children,2011,Percent,33.0
+6029,County,Kern,All Children,2013,Percent,31.3
+6031,County,Kings,All Children,2005,Percent,27.1
+6031,County,Kings,All Children,2007,Percent,29.1
+6031,County,Kings,All Children,2009,Percent,30.3
+6031,County,Kings,All Children,2011,Percent,32.1
+6031,County,Kings,All Children,2013,Percent,28.7
+6037,County,Los Angeles,All Children,2005,Percent,22.1
+6037,County,Los Angeles,All Children,2007,Percent,23.1
+6037,County,Los Angeles,All Children,2009,Percent,25.3
+6037,County,Los Angeles,All Children,2011,Percent,25.8
+6037,County,Los Angeles,All Children,2013,Percent,24.0
+6039,County,Madera,All Children,2005,Percent,26.7
+6039,County,Madera,All Children,2007,Percent,29.3
+6039,County,Madera,All Children,2009,Percent,32.9
+6039,County,Madera,All Children,2011,Percent,33.6
+6039,County,Madera,All Children,2013,Percent,31.5
+6043,County,Mariposa,All Children,2005,Percent,S
+6043,County,Mariposa,All Children,2007,Percent,S
+6043,County,Mariposa,All Children,2009,Percent,S
+6043,County,Mariposa,All Children,2011,Percent,S
+6043,County,Mariposa,All Children,2013,Percent,S
+6047,County,Merced,All Children,2005,Percent,28.8
+6047,County,Merced,All Children,2007,Percent,31.4
+6047,County,Merced,All Children,2009,Percent,36.1
+6047,County,Merced,All Children,2011,Percent,37.7
+6047,County,Merced,All Children,2013,Percent,33.4
+6051,County,Mono,All Children,2005,Percent,S
+6051,County,Mono,All Children,2007,Percent,S
+6051,County,Mono,All Children,2009,Percent,8.1
+6051,County,Mono,All Children,2011,Percent,5.8
+6051,County,Mono,All Children,2013,Percent,S
+6055,County,Napa,All Children,2009,Percent,14.0
+6055,County,Napa,All Children,2011,Percent,13.3
+6055,County,Napa,All Children,2013,Percent,9.0
+6059,County,Orange,All Children,2005,Percent,12.9
+6059,County,Orange,All Children,2007,Percent,14.6
+6059,County,Orange,All Children,2009,Percent,16.9
+6059,County,Orange,All Children,2011,Percent,17.6
+6059,County,Orange,All Children,2013,Percent,16.4
+6061,County,Placer,All Children,2005,Percent,6.8
+6061,County,Placer,All Children,2007,Percent,7.8
+6061,County,Placer,All Children,2009,Percent,11.2
+6061,County,Placer,All Children,2011,Percent,10.5
+6061,County,Placer,All Children,2013,Percent,8.3
+6067,County,Sacramento,All Children,2005,Percent,18.6
+6067,County,Sacramento,All Children,2007,Percent,21.0
+6067,County,Sacramento,All Children,2009,Percent,24.7
+6067,County,Sacramento,All Children,2011,Percent,25.0
+6067,County,Sacramento,All Children,2013,Percent,22.6
+6069,County,San Benito,All Children,2005,Percent,12.8
+6069,County,San Benito,All Children,2007,Percent,14.6
+6069,County,San Benito,All Children,2009,Percent,16.3
+6069,County,San Benito,All Children,2011,Percent,14.8
+6069,County,San Benito,All Children,2013,Percent,14.4
+6071,County,San Bernardino,All Children,2005,Percent,19.7
+6071,County,San Bernardino,All Children,2007,Percent,21.9
+6071,County,San Bernardino,All Children,2009,Percent,25.6
+6071,County,San Bernardino,All Children,2011,Percent,27.1
+6071,County,San Bernardino,All Children,2013,Percent,25.8
+6077,County,San Joaquin,All Children,2005,Percent,20.3
+6077,County,San Joaquin,All Children,2007,Percent,22.4
+6077,County,San Joaquin,All Children,2009,Percent,24.5
+6077,County,San Joaquin,All Children,2011,Percent,25.2
+6077,County,San Joaquin,All Children,2013,Percent,23.1
+6079,County,San Luis Obispo,All Children,2005,Percent,11.9
+6079,County,San Luis Obispo,All Children,2007,Percent,12.6
+6079,County,San Luis Obispo,All Children,2009,Percent,14.3
+6079,County,San Luis Obispo,All Children,2011,Percent,15.1
+6079,County,San Luis Obispo,All Children,2013,Percent,12.9
+6095,County,Solano,All Children,2005,Percent,13.0
+6095,County,Solano,All Children,2007,Percent,14.8
+6095,County,Solano,All Children,2009,Percent,18.8
+6095,County,Solano,All Children,2011,Percent,19.0
+6095,County,Solano,All Children,2013,Percent,16.6
+6099,County,Stanislaus,All Children,2005,Percent,20.9
+6099,County,Stanislaus,All Children,2007,Percent,25.0
+6099,County,Stanislaus,All Children,2009,Percent,28.4
+6099,County,Stanislaus,All Children,2011,Percent,28.2
+6099,County,Stanislaus,All Children,2013,Percent,23.2
+6101,County,Sutter,All Children,2005,Percent,17.4
+6101,County,Sutter,All Children,2007,Percent,21.6
+6101,County,Sutter,All Children,2009,Percent,22.6
+6101,County,Sutter,All Children,2011,Percent,24.3
+6101,County,Sutter,All Children,2013,Percent,23.3
+6107,County,Tulare,All Children,2005,Percent,31.6
+6107,County,Tulare,All Children,2007,Percent,32.8
+6107,County,Tulare,All Children,2009,Percent,35.8
+6107,County,Tulare,All Children,2011,Percent,37.9
+6107,County,Tulare,All Children,2013,Percent,36.2
+6109,County,Tuolumne,All Children,2005,Percent,12.7
+6109,County,Tuolumne,All Children,2007,Percent,19.5
+6109,County,Tuolumne,All Children,2009,Percent,18.5
+6109,County,Tuolumne,All Children,2011,Percent,15.9
+6109,County,Tuolumne,All Children,2013,Percent,13.8
+6111,County,Ventura,All Children,2005,Percent,12.8
+6111,County,Ventura,All Children,2007,Percent,13.6
+6111,County,Ventura,All Children,2009,Percent,16.0
+6111,County,Ventura,All Children,2011,Percent,16.1
+6111,County,Ventura,All Children,2013,Percent,14.4
+6113,County,Yolo,All Children,2005,Percent,16.1
+6113,County,Yolo,All Children,2007,Percent,17.5
+6113,County,Yolo,All Children,2009,Percent,18.0
+6113,County,Yolo,All Children,2011,Percent,18.7
+6113,County,Yolo,All Children,2013,Percent,16.3
+6005,County,Amador,All Children,2005,Percent,9.7
+6005,County,Amador,All Children,2007,Percent,12.7
+6005,County,Amador,All Children,2009,Percent,S
+6005,County,Amador,All Children,2011,Percent,S
+6005,County,Amador,All Children,2013,Percent,S
+6025,County,Imperial,All Children,2005,Percent,27.2
+6025,County,Imperial,All Children,2007,Percent,30.5
+6025,County,Imperial,All Children,2009,Percent,31.3
+6025,County,Imperial,All Children,2011,Percent,31.0
+6025,County,Imperial,All Children,2013,Percent,31.0
+6065,County,Riverside,All Children,2005,Percent,16.4
+6065,County,Riverside,All Children,2007,Percent,19.7
+6065,County,Riverside,All Children,2009,Percent,22.5
+6065,County,Riverside,All Children,2011,Percent,23.3
+6065,County,Riverside,All Children,2013,Percent,21.3
+6073,County,San Diego,All Children,2005,Percent,15.4
+6073,County,San Diego,All Children,2007,Percent,17.1
+6073,County,San Diego,All Children,2009,Percent,18.8
+6073,County,San Diego,All Children,2011,Percent,18.4
+6073,County,San Diego,All Children,2013,Percent,17.1
+6087,County,Santa Cruz,All Children,2005,Percent,14.7
+6087,County,Santa Cruz,All Children,2007,Percent,15.3
+6087,County,Santa Cruz,All Children,2009,Percent,16.3
+6087,County,Santa Cruz,All Children,2011,Percent,17.1
+6087,County,Santa Cruz,All Children,2013,Percent,17.0
