@@ -142,3 +142,133 @@ ggplot(tidy_SAT_pers, aes(year, type_of_stat, fill =stat_value)) +
   scale_fill_distiller(palette = "RdPu", direction = 1)
 ```
 
+## Analysis of Potential Demographic Biases of SAT
+### Race
+```{r}
+avail_counties <- intersect(as.vector(SAT_all$County_Name), as.vector(white_kid_data$Location))
+white_kid_data_avail <- white_kid_data |> filter(is.element(Location, avail_counties) == TRUE)
+```
+
+```{r}
+#### 2005
+white_kid_2005 <- white_kid_data_avail |> filter(TimeFrame == 2005)
+SAT2005_means|> 
+  select(County_Name, avg_per_thresh) |> 
+  mutate(per_white = white_kid_2005$Data)|> 
+  ggplot(aes(per_white, avg_per_thresh)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+
+#### 2009
+white_kid_2009 <- white_kid_data_avail |> filter(TimeFrame == 2009)
+SAT2009_means|> 
+  select(County_Name, avg_per_thresh) |> 
+  mutate(per_white = white_kid_2009$Data)|> 
+  ggplot(aes(per_white, avg_per_thresh)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+
+#### 2013
+white_kid_2013 <- white_kid_data_avail |> filter(TimeFrame == 2013)
+SAT2013_means|> 
+  select(County_Name, avg_per_thresh) |> 
+  mutate(per_white = white_kid_2013$Data)|> 
+  ggplot(aes(per_white, avg_per_thresh)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+```
+
+### Gender
+```{r}
+###2005
+avail_2005_counties <- intersect(as.vector(SAT_all$County_Name), as.vector(gender_data_2005$Location))
+gender_2005_avail <- gender_data_2005 |> filter(is.element(Location, avail_2005_counties) == TRUE)
+
+
+total_gender_2005 <- gender_2005_avail |> filter(Gender == "Total")
+total_gender_2005 <- total_gender_2005[order(total_gender_2005$Location), ]
+
+male_data_2005 <- gender_2005_avail |> filter(Gender == "Male")
+male_data_2005 <- male_data_2005[order(male_data_2005$Location), ]
+
+
+SAT2005_means|> 
+  select(County_Name, avg_per_thresh) |> 
+  mutate(num_male = as.numeric(male_data_2005$Data),
+         num_total = as.numeric(total_gender_2005$Data),
+         per_male = num_male / num_total * 100) |>
+  ggplot(aes(per_male, avg_per_thresh)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+
+
+###2009
+avail_2009_counties <- intersect(as.vector(SAT_all$County_Name), as.vector(gender_data_2009$Location))
+gender_2009_avail <- gender_data_2009 |> filter(is.element(Location, avail_2009_counties) == TRUE)
+
+
+total_gender_2009 <- gender_2009_avail |> filter(Gender == "Total")
+total_gender_2009 <- total_gender_2009[order(total_gender_2009$Location), ]
+
+male_data_2009 <- gender_2009_avail |> filter(Gender == "Male")
+male_data_2009 <- male_data_2009[order(male_data_2009$Location), ]
+
+
+SAT2009_means|> 
+  select(County_Name, avg_per_thresh) |> 
+  mutate(num_male = as.numeric(male_data_2009$Data),
+         num_total = as.numeric(total_gender_2009$Data),
+         per_male = num_male / num_total * 100) |>
+  ggplot(aes(per_male, avg_per_thresh)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+
+###2013
+avail_2013_counties <- intersect(as.vector(SAT_all$County_Name), as.vector(gender_data_2013$Location))
+gender_2013_avail <- gender_data_2013 |> filter(is.element(Location, avail_2013_counties) == TRUE)
+
+
+total_gender_2013 <- gender_2013_avail |> filter(Gender == "Total")
+total_gender_2013 <- total_gender_2013[order(total_gender_2013$Location), ]
+
+male_data_2013 <- gender_2013_avail |> filter(Gender == "Male")
+male_data_2013 <- male_data_2013[order(male_data_2013$Location), ]
+
+
+SAT2013_means|> 
+  select(County_Name, avg_per_thresh) |> 
+  mutate(num_male = as.numeric(male_data_2013$Data),
+         num_total = as.numeric(total_gender_2013$Data),
+         per_male = num_male / num_total * 100) |>
+  ggplot(aes(per_male, avg_per_thresh)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+```
+
+### Poverty
+```{r}
+#2005
+SAT2005_poverty_counties|> 
+  select(County_Name, avg_per_thresh) |> 
+  mutate(per_poverty = as.numeric(poverty_2005$Data)) |>
+  ggplot(aes(per_poverty, avg_per_thresh)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+
+#2009
+SAT2009_poverty_counties|> 
+  select(County_Name, avg_per_thresh) |> 
+  mutate(per_poverty = as.numeric(poverty_2009$Data)) |>
+  ggplot(aes(per_poverty, avg_per_thresh)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+
+#2013
+SAT2013_poverty_counties|> 
+  select(County_Name, avg_per_thresh) |> 
+  mutate(per_poverty = as.numeric(poverty_2013$Data)) |>
+  ggplot(aes(per_poverty, avg_per_thresh)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+```
+
